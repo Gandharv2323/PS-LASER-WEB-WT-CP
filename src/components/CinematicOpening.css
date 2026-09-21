@@ -1,0 +1,374 @@
+/* ===================================
+   Industrial Door Opening Animation
+   Realistic Heavy Metal Doors
+   =================================== */
+
+.cinematic-opening {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9998;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    background: transparent;
+}
+
+/* ===================================
+   Industrial Metal Door Base
+   =================================== */
+.opening-door {
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    /* Cold rolled steel base */
+    background: linear-gradient(135deg,
+            #1a1a1a 0%,
+            #252525 25%,
+            #1e1e1e 50%,
+            #222222 75%,
+            #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Industrial shadow depth */
+    box-shadow:
+        inset 0 0 60px rgba(0, 0, 0, 0.8),
+        inset 0 0 120px rgba(0, 0, 0, 0.4);
+}
+
+/* Brushed Metal Texture Layer */
+.opening-door::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* SVG brushed metal pattern */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Horizontal brushed steel lines */
+.opening-door::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(90deg,
+            transparent 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            transparent 2px,
+            transparent 4px);
+    pointer-events: none;
+}
+
+/* ===================================
+   Door Positioning & Edge Lighting
+   =================================== */
+.door-left {
+    left: 0;
+    /* Right edge lighting */
+    border-right: 1px solid rgba(255, 120, 40, 0.15);
+    box-shadow:
+        inset 0 0 60px rgba(0, 0, 0, 0.8),
+        inset -2px 0 8px rgba(255, 120, 40, 0.05);
+}
+
+.door-right {
+    right: 0;
+    /* Left edge lighting */
+    border-left: 1px solid rgba(255, 120, 40, 0.15);
+    box-shadow:
+        inset 0 0 60px rgba(0, 0, 0, 0.8),
+        inset 2px 0 8px rgba(255, 120, 40, 0.05);
+}
+
+/* Beveled edge effect */
+.door-left::before {
+    border-right: 3px solid rgba(40, 40, 40, 0.8);
+}
+
+.door-right::before {
+    border-left: 3px solid rgba(40, 40, 40, 0.8);
+}
+
+/* ===================================
+   Bolt/Fastener Grid
+   =================================== */
+.door-bolts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bolt {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    /* Metallic bolt appearance */
+    background: radial-gradient(circle at 35% 35%,
+            #4a4a4a 0%,
+            #2a2a2a 40%,
+            #1a1a1a 100%);
+    border: 1px solid rgba(80, 80, 80, 0.5);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.08),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.6),
+        0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hex pattern on bolt head */
+.bolt::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg,
+            #3a3a3a 0%,
+            #252525 100%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Bolt positions - corners and edges */
+.bolt.top-left {
+    top: 30px;
+    left: 30px;
+}
+
+.bolt.top-right {
+    top: 30px;
+    right: 30px;
+}
+
+.bolt.mid-left {
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.bolt.mid-right {
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+
+.bolt.bottom-left {
+    bottom: 30px;
+    left: 30px;
+}
+
+.bolt.bottom-right {
+    bottom: 30px;
+    right: 30px;
+}
+
+/* Additional edge bolts */
+.bolt.top-center {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bolt.bottom-center {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===================================
+   Surface Imperfections & Scratches
+   =================================== */
+.door-surface {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Random scratch lines */
+.door-surface::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.02) 20%,
+            rgba(255, 255, 255, 0.04) 50%,
+            rgba(255, 255, 255, 0.02) 80%,
+            transparent 100%);
+    transform: rotate(-2deg);
+}
+
+.door-surface::after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.03) 30%,
+            rgba(255, 255, 255, 0.02) 70%,
+            transparent 100%);
+    transform: rotate(1deg);
+}
+
+/* ===================================
+   Door Branding Letters (P & S)
+   NEUEPOWER Typography Style
+   =================================== */
+.door-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', 'Arial Black', sans-serif;
+    font-size: clamp(180px, 25vw, 320px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    z-index: 5;
+    pointer-events: none;
+    user-select: none;
+
+    /* Metallic text effect */
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            #e0e0e0 25%,
+            #c0c0c0 50%,
+            #a0a0a0 75%,
+            #909090 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Industrial depth */
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 4px 8px rgba(0, 0, 0, 0.6),
+        0 8px 16px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.1);
+
+    /* Subtle edge glow */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+}
+
+/* ===================================
+   Central Seam (Where Doors Meet)
+   =================================== */
+.seam-glow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+    /* Subtle industrial glow - not fantasy */
+    background: linear-gradient(180deg,
+            rgba(255, 140, 60, 0.3) 0%,
+            rgba(255, 100, 40, 0.6) 30%,
+            rgba(255, 120, 50, 0.6) 70%,
+            rgba(255, 140, 60, 0.3) 100%);
+    box-shadow:
+        0 0 8px rgba(255, 100, 40, 0.3),
+        0 0 16px rgba(255, 80, 30, 0.15);
+}
+
+/* ===================================
+   Spark Canvas
+   =================================== */
+.opening-sparks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 15;
+    pointer-events: none;
+}
+
+/* ===================================
+   Background removed for transparency
+   Website content shows through
+   =================================== */
+
+/* ===================================
+   Responsive - Mobile Adjustments
+   =================================== */
+@media (max-width: 768px) {
+    .bolt {
+        width: 10px;
+        height: 10px;
+    }
+
+    .bolt::before {
+        width: 6px;
+        height: 6px;
+    }
+
+    .bolt.top-left,
+    .bolt.top-right,
+    .bolt.bottom-left,
+    .bolt.bottom-right,
+    .bolt.mid-left,
+    .bolt.mid-right {
+        left: 15px;
+        right: auto;
+    }
+
+    .bolt.top-right,
+    .bolt.mid-right,
+    .bolt.bottom-right {
+        left: auto;
+        right: 15px;
+    }
+
+    .bolt.top-left,
+    .bolt.top-right,
+    .bolt.top-center {
+        top: 15px;
+    }
+
+    .bolt.bottom-left,
+    .bolt.bottom-right,
+    .bolt.bottom-center {
+        bottom: 15px;
+    }
+
+    /* Door letters - smaller on mobile */
+    .door-letter {
+        font-size: clamp(120px, 30vw, 180px);
+    }
+}
+
+/* ===================================
+   Reduced Motion Preference
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    .seam-glow {
+        box-shadow: none;
+    }
+}
