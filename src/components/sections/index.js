@@ -1,0 +1,12 @@
+// Cinematic Sections - Export all
+export { default as HeroSection } from './HeroSection'
+export { default as WhatWeDoSection } from './WhatWeDoSection'
+export { default as LaserCuttingSection } from './LaserCuttingSection'
+export { default as BendingSection } from './BendingSection'
+export { default as PowderCoatingSection } from './PowderCoatingSection'
+export { default as FabricationSection } from './FabricationSection'
+export { default as CapabilitiesSection } from './CapabilitiesSection'
+export { default as PortfolioSection } from './PortfolioSection'
+export { default as ProcessSection } from './ProcessSection'
+export { default as AboutSection } from './AboutSection'
+export { default as ContactSection } from './ContactSection'
