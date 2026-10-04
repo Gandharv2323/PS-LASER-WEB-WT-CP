@@ -1,0 +1,212 @@
+/* ===================================
+   Contact Section - Refined Styles
+   =================================== */
+
+.contact {
+    background: var(--color-primary-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo Background */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
+    background-image: url('/ps-laser-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact>.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Actions */
+.contact-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.contact-action {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    background: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    text-decoration: none;
+    transition: all var(--transition-medium);
+}
+
+.contact-action:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.contact-action.whatsapp:hover {
+    border-color: #25D366;
+}
+
+.action-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.contact-action.whatsapp .action-label {
+    color: #25D366;
+}
+
+/* WhatsApp GIF Animation */
+.contact-action.whatsapp {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.whatsapp-gif {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.whatsapp-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.contact-block {
+    padding: 2rem;
+    background: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.block-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Phone List */
+.phone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.phone-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.phone-item:last-child {
+    border-bottom: none;
+}
+
+.phone-number {
+    font-weight: 500;
+}
+
+.phone-name {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
+.phone-item:hover {
+    color: var(--color-accent);
+}
+
+.phone-badge {
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--color-accent);
+}
+
+/* Address */
+.address-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+}
+
+/* GST */
+.gst-number {
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-block:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-action {
+        padding: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-block:last-child {
+        grid-column: auto;
+    }
+}

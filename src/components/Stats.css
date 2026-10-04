@@ -1,0 +1,64 @@
+/* ===================================
+   Stats Section - Large Numbers
+   =================================== */
+
+.stats {
+    padding: 5rem 0;
+    background: var(--color-primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'IBM Plex Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.stat-suffix {
+    font-size: 0.5em;
+    color: var(--color-accent);
+    vertical-align: super;
+}
+
+.stat-label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+}

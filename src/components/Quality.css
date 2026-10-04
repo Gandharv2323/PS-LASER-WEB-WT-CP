@@ -1,0 +1,147 @@
+/* ===================================
+   Quality Section - Refined Styles
+   =================================== */
+
+.quality {
+    background: var(--color-primary-dark);
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.quality-block {
+    padding: 2.5rem;
+    background: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.block-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Tools List */
+.tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tool-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tool-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.tool-name {
+    font-size: 1rem;
+    color: var(--color-text-primary);
+}
+
+.tool-precision {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+}
+
+/* Systems List */
+.systems-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.system-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.system-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.system-name {
+    font-size: 1rem;
+    color: var(--color-text-primary);
+}
+
+.system-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* Quality Metrics */
+.quality-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    background: var(--color-primary);
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-block {
+        padding: 2rem;
+    }
+
+    .quality-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .metric {
+        padding: 2rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+}

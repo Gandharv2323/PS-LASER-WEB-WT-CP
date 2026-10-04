@@ -1,0 +1,105 @@
+/* ===================================
+   Process Section - Timeline
+   =================================== */
+
+.process {
+    background: var(--color-primary-dark);
+}
+
+.process-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.process-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* Step Number */
+.step-number {
+    font-family: 'IBM Plex Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-accent);
+    background: var(--color-primary-dark);
+    position: relative;
+    z-index: 2;
+}
+
+/* Connecting Line */
+.step-line {
+    position: absolute;
+    top: 24px;
+    left: calc(50% + 24px);
+    right: calc(-50% + 24px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.process-step:last-child .step-line {
+    display: none;
+}
+
+/* Step Content */
+.step-content {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.step-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.step-description {
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .process-timeline {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .process-step {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .step-line {
+        top: 48px;
+        left: 24px;
+        right: auto;
+        width: 1px;
+        height: calc(100% + 2rem);
+    }
+
+    .process-step:last-child .step-line {
+        display: none;
+    }
+
+    .step-content {
+        text-align: left;
+        margin-top: 0;
+        margin-left: 1.5rem;
+        padding-top: 0.75rem;
+    }
+}

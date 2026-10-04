@@ -1,0 +1,103 @@
+/* ===================================
+   About Section - Refined Styles
+   =================================== */
+
+.about {
+    background: var(--color-primary);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Company Info */
+.about-info {
+    padding: 2.5rem;
+    background: var(--color-primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.info-block {
+    margin-bottom: 2rem;
+}
+
+.info-block:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+}
+
+.info-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+}
+
+/* Core Values */
+.about-values {
+    padding: 2.5rem;
+    background: var(--color-primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.values-title {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.value-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.value-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.value-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.value-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info,
+    .about-values {
+        padding: 2rem;
+    }
+}
