@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "hsg-3kw-fiber-laser",
+    "name": "HSG 3 kW Fiber Laser Cutting Machine (3m x 1.5m)",
+    "category": "Laser Cutting",
+    "specs": [
+      "Make: HSG",
+      "Laser power: 3 kW (fiber)",
+      "Bed size: 3 m x 1.5 m",
+      "Enclosed (full-cover) cabinet with exchange table",
+      "Shop cutting capacity (PDF): Mild Steel 16 mm, Stainless Steel 12 mm, Aluminium 8 mm, Brass 4 mm, Copper 4 mm"
+    ],
+    "image": "/sites/pslaser/machines/hsg-3kw-fiber-laser-3x1.5m.jpg"
+  },
+  {
+    "slug": "genesis-1-5kw-fiber-laser",
+    "name": "Genesis 1.5 kW Fiber Laser Cutting Machine (3m x 1.5m)",
+    "category": "Laser Cutting",
+    "specs": [
+      "Make: Genesis",
+      "Laser power: 1.5 kW (fiber)",
+      "Bed size: 3 m x 1.5 m",
+      "Open-bed gantry type"
+    ],
+    "image": "/sites/pslaser/machines/genesis-1.5kw-fiber-laser-3x1.5m.jpg"
+  },
+  {
+    "slug": "smart-bend-175t-press-brake",
+    "name": "CNC Press Brake 175 Ton x 3 m (3m Laser Technologies Smart Bend)",
+    "category": "Bending",
+    "specs": [
+      "Capacity: 175 Ton",
+      "Bending length: 3 m",
+      "Sheet thickness: 1 mm to 12 mm",
+      "CNC controlled, Y1/Y2 synchro axes",
+      "Brand as printed in PDF: \"3m Laser Technologies Smart Bend\""
+    ],
+    "image": "/sites/pslaser/machines/smart-bend-175t-cnc-press-brake-3m.jpg"
+  },
+  {
+    "slug": "amada-vela-ii-32t-turret-punch",
+    "name": "Amada VELA II CNC Turret Punch Press - 32 Ton",
+    "category": "CNC Turret Punching",
+    "specs": [
+      "Make/model: Amada VELA II (as visible on machine photo)",
+      "Capacity: 32 Ton",
+      "Punching capacity: up to 5 mm",
+      "Number of stations: 40",
+      "Table capacity: 8 ft x 4 ft"
+    ],
+    "image": "/sites/pslaser/machines/amada-vela-ii-32t-cnc-turret-punch.jpg"
+  },
+  {
+    "slug": "amada-pega-16t-turret-punch",
+    "name": "Amada PEGA CNC Turret Punch Press - 16 Ton",
+    "category": "CNC Turret Punching",
+    "specs": [
+      "Make/model: Amada PEGA (as visible on machine photo)",
+      "Capacity: 16 Ton",
+      "Punching capacity: up to 3 mm",
+      "Number of stations: 26",
+      "Table capacity: 4 ft x 4 ft"
+    ],
+    "image": "/sites/pslaser/machines/amada-pega-16t-cnc-turret-punch.jpg"
+  },
+  {
+    "slug": "hsg-1-5kw-laser-welder",
+    "name": "HSG 1.5 kW Handheld Laser Welding Machine",
+    "category": "Laser Welding",
+    "specs": [
+      "Make: HSG",
+      "Laser power: 1.5 kW",
+      "Materials: MS, SS & Aluminium",
+      "Weld types: fillet, vertical, tailor and flat welding"
+    ],
+    "image": "/sites/pslaser/machines/hsg-1.5kw-handheld-laser-welder.jpg"
+  },
+  {
+    "slug": "plc-powder-coating-plant",
+    "name": "PLC-Based Powder Coating Plant",
+    "category": "Powder Coating",
+    "specs": [
+      "PLC-based plant",
+      "9-tank pre-treatment (PT) process",
+      "Oven drying at 120 °C (removes excess moisture)",
+      "SS powder coating booth with Wagner gun - quick colour changeover",
+      "Oven curing",
+      "Salt spray resistance: 900-1000 hours SST"
+    ],
+    "image": "/sites/pslaser/services/powder-coating.jpg"
+  }
+]
