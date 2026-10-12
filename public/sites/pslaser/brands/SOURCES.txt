@@ -1,0 +1,5 @@
+Equipment brand logos (used only to identify machines on PS Laser's floor; not partners or clients).
+amada.svg      - https://commons.wikimedia.org/wiki/File:Amada.svg (Amada Co., Ltd. logo; Commons, CC BY-SA 3.0 per file page; trademark of Amada)
+hsg-laser.webp - https://static.hsglasercnc.com/img/logo.webp (official HSG Laser site header logo)
+wagner.png     - https://cdn.wagner-group.com/assets/img/wagner-logo.png (official J. Wagner GmbH site logo)
+Genesis        - no verified official logo found; shown as a text wordmark.
