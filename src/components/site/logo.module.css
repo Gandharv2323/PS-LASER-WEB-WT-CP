@@ -1,0 +1,63 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--c-ink);
+  line-height: 1;
+}
+
+.logo[data-tone="light"] {
+  color: var(--c-paper);
+}
+
+.mark {
+  position: relative;
+  display: block;
+  width: 38px;
+  height: 39px;
+  flex: none;
+}
+
+.mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity var(--dur-2) var(--ease);
+}
+
+.markDark,
+.markLight {
+  position: absolute;
+  inset: 0;
+}
+
+/* Adaptive mode: parent sets data-logo-tone="light" | "dark" */
+.markLight {
+  opacity: 0;
+}
+
+:global([data-logo-tone="light"]) .markLight {
+  opacity: 1;
+}
+
+:global([data-logo-tone="light"]) .markDark {
+  opacity: 0;
+}
+
+:global([data-logo-tone="light"]) .logo {
+  color: var(--c-paper);
+}
+
+.word {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color var(--dur-2) var(--ease);
+}
+
+.ps {
+  color: var(--c-accent);
+}

@@ -1,0 +1,45 @@
+.wrap {
+  display: grid;
+  background: var(--c-white);
+  border: 1px solid var(--c-line);
+  color: var(--c-ink);
+  min-width: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  background: var(--c-paper-2);
+}
+
+.frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.35) contrast(1.02);
+  transition: filter var(--dur-3) var(--ease);
+}
+
+.wrap:hover .frame iframe {
+  filter: none;
+}
+
+.bar {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-top: 1px solid var(--c-line);
+}
+
+.addr {
+  font-size: 0.9375rem;
+  color: var(--c-steel-700);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

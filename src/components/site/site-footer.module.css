@@ -1,0 +1,136 @@
+.footer {
+  padding-top: clamp(64px, 3rem + 4vw, 120px);
+  padding-bottom: var(--space-6);
+  border-top: 2px solid var(--c-accent);
+}
+
+.top {
+  display: grid;
+  gap: var(--space-7) var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+.brandCol {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+  align-content: start;
+}
+
+.blurb {
+  max-width: 36ch;
+  color: var(--c-steel-300);
+}
+
+.col {
+  min-width: 0;
+}
+
+.colTitle {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-ui);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--c-steel-500);
+}
+
+.links {
+  display: grid;
+  gap: 10px;
+}
+
+.links a {
+  color: var(--c-steel-100);
+  font-size: 0.9375rem;
+  transition: color var(--dur-1) var(--ease);
+}
+
+.links a:hover {
+  color: var(--c-accent);
+}
+
+.contactList {
+  display: grid;
+  gap: 14px;
+}
+
+.contact {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--c-steel-100);
+  transition: color var(--dur-1) var(--ease);
+}
+
+.contact:hover {
+  color: var(--c-accent);
+}
+
+.contact svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  flex: none;
+  color: var(--c-accent);
+}
+
+.phone {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  overflow-wrap: anywhere;
+}
+
+.person {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--c-steel-500);
+}
+
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  margin-top: var(--space-8);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--c-line-inv);
+  color: var(--c-steel-100);
+}
+
+.address > svg {
+  width: 18px;
+  height: 18px;
+  color: var(--c-accent);
+  flex: none;
+}
+
+.address address {
+  font-style: normal;
+  flex: 1 1 260px;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--c-line-inv);
+  font-size: 0.8125rem;
+  color: var(--c-steel-500);
+}
+
+@media (min-width: 640px) {
+  .top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .top {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
+  }
+}

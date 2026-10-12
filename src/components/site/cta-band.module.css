@@ -1,0 +1,70 @@
+.band {
+  position: relative;
+  padding-block: clamp(56px, 2.5rem + 4vw, 112px);
+  overflow: hidden;
+}
+
+.accent {
+  --tone-muted: rgba(20, 20, 20, 0.72);
+  --tone-line: rgba(20, 20, 20, 0.18);
+  background: var(--c-accent);
+  color: var(--c-ink);
+}
+
+/* Fine engineering grid texture */
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(20, 20, 20, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 20, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  gap: var(--space-6);
+  align-items: end;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.copy .eyebrow {
+  color: var(--tone-muted);
+}
+
+.accent .eyebrow::before {
+  background: var(--c-ink);
+}
+
+.title {
+  max-width: 20ch;
+}
+
+.copy .text {
+  max-width: 58ch;
+  font-size: var(--fs-lead);
+  color: var(--tone-muted);
+}
+
+.accent :global(.s-btn--secondary) {
+  --btn-bd: rgba(20, 20, 20, 0.45);
+}
+
+@media (min-width: 960px) {
+  .inner {
+    grid-template-columns: minmax(0, 1.4fr) auto;
+    gap: var(--space-8);
+  }
+
+  .actions {
+    justify-content: flex-end;
+  }
+}

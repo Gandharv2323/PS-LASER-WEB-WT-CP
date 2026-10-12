@@ -1,0 +1,61 @@
+.fab {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: var(--z-float);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--c-whatsapp);
+  color: #0b2e17;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  transition:
+    transform var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+  animation: fabIn var(--dur-4) var(--ease) 900ms backwards;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
+}
+
+.fab:active {
+  transform: scale(0.97);
+}
+
+.fab svg {
+  width: 26px;
+  height: 26px;
+  flex: none;
+}
+
+.label {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .label {
+    display: inline;
+  }
+
+  .fab {
+    padding: 0 20px 0 16px;
+  }
+}
+
+@keyframes fabIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

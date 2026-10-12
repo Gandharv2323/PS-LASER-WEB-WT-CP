@@ -1,0 +1,77 @@
+.head {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+
+.head .title {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  text-transform: uppercase;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--tone-line);
+  border-left: 1px solid var(--tone-line);
+}
+
+.item {
+  display: grid;
+  gap: 6px;
+  align-content: center;
+  min-height: 132px;
+  padding: var(--space-5);
+  border-right: 1px solid var(--tone-line);
+  border-bottom: 1px solid var(--tone-line);
+  transition: background-color var(--dur-2) var(--ease);
+}
+
+.item:hover {
+  background: rgba(246, 244, 240, 0.03);
+}
+
+/* Neutral type treatment per brand — distinct, but never an imitation of a logo */
+.word {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 1.2rem + 1.8vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--tone-fg);
+  opacity: 0.88;
+  transition: opacity var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
+}
+
+.word[data-brand="Amada"],
+.word[data-brand="Wagner"] {
+  letter-spacing: 0.14em;
+  font-weight: 600;
+}
+
+.word[data-brand="Genesis"] {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.item:hover .word {
+  opacity: 1;
+  color: var(--c-accent);
+}
+
+.note {
+  font-size: 0.8125rem;
+  color: var(--tone-muted);
+}
+
+@media (min-width: 900px) {
+  .list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .item {
+    min-height: 168px;
+    padding: var(--space-6);
+  }
+}

@@ -1,33 +1,30 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+/**
+ * Minimal root layout. Styling lives in the route-group layouts:
+ *  - src/app/(classic)/layout.tsx → main classic multi-page site at "/" (Bootstrap 4 + kakadelaser.css)
+ *  - src/app/(site)/layout.tsx    → modern redesign at /modern (site.css, fonts, header/footer)
+ *  - src/app/(legacy)/layout.tsx  → /advanced (Bootstrap-era CSS)
+ */
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: {
+    default: "PS Laser | Precision Sheet Metal & CNC Laser Cutting, Pune",
+    template: "%s | PS Laser",
+  },
+  description:
+    "PS Laser is a sheet metal job shop at Velu, Bhor, Pune: CNC fiber laser cutting, CNC bending, turret punching, laser welding, fabrication and powder coating.",
+  applicationName: "PS Laser",
+  icons: { icon: "/sites/pslaser/logo/favicon.png" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#141414",
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
