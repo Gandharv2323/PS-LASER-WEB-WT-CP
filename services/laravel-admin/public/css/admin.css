@@ -1,0 +1,84 @@
+/* PS Laser Admin — brand layer on top of Bootstrap 5 (orange #EF7D00). */
+:root {
+  --psl-orange: #EF7D00;
+  --psl-orange-dark: #c96900;
+  --psl-ink: #1d1d1f;
+  --bs-primary: #EF7D00;
+  --bs-primary-rgb: 239, 125, 0;
+  --bs-link-color: #c96900;
+  --bs-link-color-rgb: 201, 105, 0;
+  --bs-link-hover-color: #9e5300;
+  --bs-body-bg: #f6f6f4;
+}
+
+body { background: var(--bs-body-bg); }
+
+.btn-primary {
+  --bs-btn-bg: var(--psl-orange);
+  --bs-btn-border-color: var(--psl-orange);
+  --bs-btn-hover-bg: var(--psl-orange-dark);
+  --bs-btn-hover-border-color: var(--psl-orange-dark);
+  --bs-btn-active-bg: #a85800;
+  --bs-btn-active-border-color: #a85800;
+  --bs-btn-disabled-bg: var(--psl-orange);
+  --bs-btn-disabled-border-color: var(--psl-orange);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--psl-orange-dark);
+  --bs-btn-border-color: var(--psl-orange);
+  --bs-btn-hover-bg: var(--psl-orange);
+  --bs-btn-hover-border-color: var(--psl-orange);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--psl-orange-dark);
+}
+.text-brand { color: var(--psl-orange) !important; }
+.bg-brand { background: var(--psl-orange) !important; color: #fff; }
+.form-control:focus, .form-select:focus, .form-check-input:focus {
+  border-color: #f5b266;
+  box-shadow: 0 0 0 .2rem rgba(239, 125, 0, .2);
+}
+.form-check-input:checked { background-color: var(--psl-orange); border-color: var(--psl-orange); }
+.pagination { --bs-pagination-active-bg: var(--psl-orange); --bs-pagination-active-border-color: var(--psl-orange); --bs-pagination-color: var(--psl-orange-dark); }
+
+/* Top bar */
+.psl-topbar { background: var(--psl-ink); border-bottom: 3px solid var(--psl-orange); }
+.psl-topbar .navbar-brand img { height: 34px; width: auto; background: #fff; border-radius: 6px; padding: 2px 6px; }
+.psl-topbar .nav-link { color: rgba(255, 255, 255, .78); border-radius: .4rem; }
+.psl-topbar .nav-link:hover { color: #fff; }
+.psl-topbar .nav-link.active { color: #fff; background: rgba(239, 125, 0, .9); }
+.psl-topbar .navbar-toggler { border-color: rgba(255, 255, 255, .3); }
+.psl-topbar .navbar-toggler-icon { filter: invert(1); }
+
+.page-title { font-weight: 700; letter-spacing: -.01em; }
+.card { border: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 1px 8px rgba(0, 0, 0, .04); }
+.stat-card .stat-value { font-size: 1.9rem; font-weight: 700; line-height: 1; }
+.stat-card .stat-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(239, 125, 0, .12); color: var(--psl-orange-dark); font-size: 1.3rem; }
+
+.table > :not(caption) > * > * { vertical-align: middle; }
+.table thead th { font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: #6c757d; font-weight: 600; }
+
+/* Status timeline */
+.timeline { list-style: none; padding-left: 0; margin: 0; }
+.timeline li { position: relative; padding: 0 0 1.1rem 1.6rem; border-left: 2px solid #e6e1da; margin-left: .45rem; }
+.timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 3px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2px solid var(--psl-orange); }
+.timeline li.current::before { background: var(--psl-orange); }
+
+.pipeline-bar { display: flex; gap: 4px; }
+.pipeline-bar span { flex: 1; height: 6px; border-radius: 3px; background: #e6e1da; }
+.pipeline-bar span.done { background: var(--psl-orange); }
+
+.machine-thumb { width: 72px; height: 54px; object-fit: cover; border-radius: 6px; background: #eee; }
+.sample-banner { background: #fff4e5; border: 1px solid #ffd59e; color: #7a4100; }
+.login-wrap { min-height: 100vh; }
+.login-card { max-width: 420px; width: 100%; }
+@media (max-width: 575.98px) {
+  .page-title { font-size: 1.35rem; }
+  .stat-card .stat-value { font-size: 1.5rem; }
+}
+
+.min-w-0 { min-width: 0; }
+.stat-card .stat-icon { flex-shrink: 0; }
+@media (max-width: 575.98px) { .stat-card .stat-icon { width: 36px; height: 36px; font-size: 1.05rem; } .stat-card .card-body { padding: .75rem; } }
