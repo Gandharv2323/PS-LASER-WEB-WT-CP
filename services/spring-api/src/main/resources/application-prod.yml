@@ -1,0 +1,20 @@
+# Production profile: everything comes from environment variables, quieter logs,
+# fewer actuator endpoints. Run with SPRING_PROFILES_ACTIVE=prod.
+spring:
+  devtools:
+    restart:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+      roles: ADMIN
+
+logging:
+  level:
+    in.pslaser: INFO

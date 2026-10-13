@@ -1,0 +1,31 @@
+# 'test' profile: in-memory H2 in MySQL compatibility mode instead of the shared MySQL DB,
+# so `mvnw test` never touches real data and runs on any machine (no XAMPP, no Docker).
+spring:
+  datasource:
+    url: jdbc:h2:mem:pslaser;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema-h2.sql
+      data-locations: classpath:data-h2.sql
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    defer-datasource-initialization: false
+  devtools:
+    restart:
+      enabled: false
+
+management:
+  health:
+    mongo:
+      enabled: false
+
+logging:
+  file:
+    name: ""
+  level:
+    in.pslaser: INFO

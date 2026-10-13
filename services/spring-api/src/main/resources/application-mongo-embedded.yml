@@ -1,0 +1,12 @@
+# Opt-in profile: start an embedded MongoDB (flapdoodle) inside the JVM - for machines without Docker.
+# Usage: mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=dev,mongo-embedded
+# The first run downloads the mongod binary (~100 MB) into ~/.embedmongo.
+spring:
+  autoconfigure:
+    exclude: ""
+
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 7.0.14

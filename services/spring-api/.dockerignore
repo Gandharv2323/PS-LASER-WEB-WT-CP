@@ -1,0 +1,6 @@
+target/
+logs/
+postman/
+*.md
+.idea/
+.vscode/

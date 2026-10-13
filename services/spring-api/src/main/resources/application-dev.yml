@@ -1,0 +1,16 @@
+# Developer profile (active by default via spring.profiles.default=dev).
+# MongoDB: uses a real server on localhost:27017 (docker run -d --name pslaser-mongo -p 27017:27017 mongo:7).
+# No Docker? run with  --spring.profiles.active=dev,mongo-embedded  (downloads a mongod binary on first run),
+# or just run 'dev' alone: the activity log then logs a warning and the rest of the API keeps working.
+spring:
+  jpa:
+    show-sql: false
+  devtools:
+    restart:
+      enabled: true
+
+logging:
+  level:
+    in.pslaser: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: INFO

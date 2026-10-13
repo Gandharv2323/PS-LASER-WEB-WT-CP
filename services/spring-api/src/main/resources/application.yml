@@ -1,0 +1,94 @@
+# PS Laser Spring Boot API - common configuration (all profiles).
+# Every value that differs between machines is externalised: ${ENV_VAR:default}.
+# Profiles: dev (default), mongo-embedded (opt-in, no Docker needed), prod, test (src/test/resources).
+
+server:
+  port: ${PORT:8081}
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: pslaser-spring-api
+  profiles:
+    default: dev
+  # --- SQL: shared MySQL/MariaDB database (schema owned by services/db/schema.sql) ---
+  datasource:
+    url: jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:pslaser}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 5000
+  jpa:
+    # NEVER let Hibernate create/alter the shared tables - only check that entities match them.
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+  # --- NoSQL: MongoDB activity log ---
+  data:
+    mongodb:
+      host: ${MONGO_HOST:localhost}
+      port: ${MONGO_PORT:27017}
+      database: ${MONGO_DB:pslaser}
+  # embedded MongoDB is only switched on by the 'mongo-embedded' profile
+  autoconfigure:
+    exclude: de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoAutoConfiguration
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    default-property-inclusion: always
+
+# --- Custom, type-safe settings bound to PsLaserProperties (@ConfigurationProperties) ---
+pslaser:
+  jwt:
+    secret: ${JWT_SECRET:pslaser-dev-secret-change-me-0123456789abcdef}
+    expiry-hours: ${JWT_EXPIRY_HOURS:8}
+    issuer: pslaser-spring-api
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:3001,http://localhost:5173,http://localhost:8000,http://localhost:8001,http://localhost:8080}
+  whatsapp-number: "917719976990"
+
+# --- Monitoring: Spring Boot Actuator ---
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env,loggers
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true
+  health:
+    mongo:
+      enabled: ${MONGO_HEALTH_ENABLED:true}
+
+info:
+  app:
+    name: PS Laser Spring Boot API
+    description: Catalogue, estimates, quotes, work orders, JWT auth (CS3111 Unit IV)
+    owner: PS Laser, Pune
+    contract: services/CONTRACT.md
+
+logging:
+  level:
+    root: INFO
+    in.pslaser: INFO
+  file:
+    name: ${LOG_FILE:logs/spring-api.log}
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 5
