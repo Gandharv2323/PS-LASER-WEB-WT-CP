@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tag Library Descriptor for PS Laser custom tags. Used as:
+     <%@ taglib prefix="ps" uri="/WEB-INF/ps.tld" %>  then  <ps:statusBadge status="${order.status}"/> -->
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+  <tlib-version>1.0</tlib-version>
+  <short-name>ps</short-name>
+  <uri>http://pslaser.in/tags</uri>
+
+  <tag>
+    <description>Coloured badge for a work-order production stage</description>
+    <name>statusBadge</name>
+    <tag-class>com.pslaser.desk.tags.StatusBadgeTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>status</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>size</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>

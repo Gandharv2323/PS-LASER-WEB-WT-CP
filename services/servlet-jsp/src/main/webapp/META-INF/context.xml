@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Tomcat context descriptor for /pslaser (copied to conf/Catalina/localhost/pslaser.xml on deploy).
+
+  The app builds its own Tomcat JDBC pool in Db.java (driver jar in WEB-INF/lib), so nothing
+  here is required. To use a CONTAINER-MANAGED JNDI pool instead, copy mysql-connector-j-*.jar
+  into C:\xampp\tomcat\lib and uncomment the Resource below - Db.create() looks up
+  java:comp/env/jdbc/pslaser first and uses it when present.
+-->
+<Context>
+  <!--
+  <Resource name="jdbc/pslaser" auth="Container" type="javax.sql.DataSource"
+            factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/pslaser?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8"
+            username="root" password=""
+            initialSize="2" maxActive="20" minIdle="2" maxWait="10000"
+            testOnBorrow="true" validationQuery="SELECT 1"/>
+  -->
+  <!-- Do not persist sessions across restarts (dev) -->
+  <Manager pathname="" />
+</Context>

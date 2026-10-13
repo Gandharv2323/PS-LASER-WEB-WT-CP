@@ -1,0 +1,61 @@
+<%-- Page header, pulled in with the STATIC include directive  <%@ include file="..." %>
+     (copied into the including page at translation time, so it shares its taglibs and variables).
+     Expects the including page to declare the c taglib and set ${pageTitle}. --%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><c:out value="${empty pageTitle ? 'Order Desk' : pageTitle}"/> | PS Laser</title>
+  <link rel="icon" href="<c:url value='/img/favicon.png'/>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<c:url value='/css/app.css'/>">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom ps-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="<c:url value='/'/>">
+      <img src="<c:url value='/img/ps-laser-logo.png'/>" alt="PS Laser" height="40">
+      <span class="ml-2 ps-brand-sub d-none d-sm-inline">Order Desk</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#psNav"
+            aria-controls="psNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="psNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="<c:url value='/track'/>">Track order</a></li>
+        <li class="nav-item"><a class="nav-link" href="<c:url value='/estimate'/>">Estimate</a></li>
+        <li class="nav-item"><a class="nav-link" href="<c:url value='/staff/orders'/>">Staff desk</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="demoMenu" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">Servlet &amp; JSP demos</a>
+          <div class="dropdown-menu" aria-labelledby="demoMenu">
+            <a class="dropdown-item" href="<c:url value='/hello'/>">Hello World servlet</a>
+            <a class="dropdown-item" href="<c:url value='/lifecycle'/>">Servlet life cycle</a>
+            <a class="dropdown-item" href="<c:url value='/concurrency'/>">Concurrency</a>
+            <a class="dropdown-item" href="<c:url value='/session-demo'/>">Sessions &amp; URL rewriting</a>
+            <a class="dropdown-item" href="<c:url value='/dispatch'/>">Forward / include / redirect</a>
+            <a class="dropdown-item" href="<c:url value='/basics.jsp'/>">Basic JSP (scriptlets)</a>
+            <a class="dropdown-item" href="<c:url value='/about'/>">Data storage &amp; app info</a>
+          </div>
+        </li>
+      </ul>
+      <c:choose>
+        <c:when test="${not empty sessionScope.user}">
+          <form class="form-inline my-2 my-lg-0" method="post" action="<c:url value='/logout'/>">
+            <input type="hidden" name="csrf" value="${sessionScope.csrf}">
+            <span class="navbar-text small mr-2">
+              <c:out value="${sessionScope.user.name}"/>
+              <span class="text-muted">&middot; ${applicationScope.activeSessions} active session(s)</span>
+            </span>
+            <button class="btn btn-sm btn-outline-ps" type="submit">Log out</button>
+          </form>
+        </c:when>
+        <c:otherwise>
+          <a class="btn btn-sm btn-ps" href="<c:url value='/login'/>">Staff login</a>
+        </c:otherwise>
+      </c:choose>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PS Laser Order Desk - deployment descriptor (Servlet 3.1 / Tomcat 8.5, javax.* namespace).
+  Some components are declared here (Hello, Lifecycle, filters, context listener) and the rest
+  use @WebServlet / @WebListener annotations, so both styles are demonstrated.
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <display-name>PS Laser Order Desk</display-name>
+
+  <!-- ===== Context (application-wide) init parameters: ServletContext.getInitParameter() ===== -->
+  <context-param>
+    <param-name>db.host</param-name><param-value>localhost</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.port</param-name><param-value>3306</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.name</param-name><param-value>pslaser</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.user</param-name><param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>supportWhatsApp</param-name><param-value>917719976990</param-value>
+  </context-param>
+  <!-- JSTL fmt:* default time zone (fmt:formatDate) -->
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.timeZone</param-name><param-value>Asia/Kolkata</param-value>
+  </context-param>
+
+  <!-- ===== Listeners (SessionCounterListener is registered with @WebListener instead) ===== -->
+  <listener>
+    <listener-class>com.pslaser.desk.listener.AppContextListener</listener-class>
+  </listener>
+
+  <!-- ===== Filters: run in the order of their filter-mapping elements ===== -->
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.pslaser.desk.filter.EncodingFilter</filter-class>
+    <async-supported>true</async-supported>
+    <init-param><param-name>encoding</param-name><param-value>UTF-8</param-value></init-param>
+  </filter>
+  <filter>
+    <filter-name>RequestLogFilter</filter-name>
+    <filter-class>com.pslaser.desk.filter.RequestLogFilter</filter-class>
+    <async-supported>true</async-supported>
+  </filter>
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.pslaser.desk.filter.AuthFilter</filter-class>
+    <async-supported>true</async-supported>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>RequestLogFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/staff/*</url-pattern>
+  </filter-mapping>
+
+  <!-- ===== Servlets declared in XML ===== -->
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.pslaser.desk.web.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LifecycleServlet</servlet-name>
+    <servlet-class>com.pslaser.desk.web.LifecycleServlet</servlet-class>
+    <!-- servlet init-params: ServletConfig.getInitParameter() (visible only to this servlet) -->
+    <init-param><param-name>shopName</param-name><param-value>PS Laser, Pune</param-value></init-param>
+    <init-param><param-name>maxEvents</param-name><param-value>25</param-value></init-param>
+    <!-- create + init() at deploy time instead of on the first request -->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LifecycleServlet</servlet-name>
+    <url-pattern>/lifecycle</url-pattern>
+  </servlet-mapping>
+
+  <!-- ===== Sessions: 30-minute idle timeout, HttpOnly cookie, cookie + URL rewriting ===== -->
+  <session-config>
+    <session-timeout>30</session-timeout>
+    <cookie-config>
+      <http-only>true</http-only>
+    </cookie-config>
+    <tracking-mode>COOKIE</tracking-mode>
+    <tracking-mode>URL</tracking-mode>
+  </session-config>
+
+  <!-- ===== JSP configuration: all pages UTF-8, trim the blank lines directives leave behind ===== -->
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <page-encoding>UTF-8</page-encoding>
+      <trim-directive-whitespaces>true</trim-directive-whitespaces>
+    </jsp-property-group>
+  </jsp-config>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- ===== Error pages ===== -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/views/error/404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/views/error/403.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/WEB-INF/views/error/500.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/WEB-INF/views/error/500.jsp</location>
+  </error-page>
+</web-app>

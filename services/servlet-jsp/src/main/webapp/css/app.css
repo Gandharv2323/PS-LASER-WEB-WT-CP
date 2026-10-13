@@ -1,0 +1,81 @@
+/* PS Laser Order Desk - brand layer on top of Bootstrap 4.6 */
+:root {
+  --ps-orange: #EF7D00;
+  --ps-orange-dark: #c96900;
+  --ps-ink: #1f2328;
+  --ps-soft: #fff4e6;
+}
+body { background: #f6f7f9; color: var(--ps-ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+a { color: var(--ps-orange-dark); }
+a:hover { color: var(--ps-orange); }
+.text-ps { color: var(--ps-orange) !important; }
+.border-ps { border-color: var(--ps-orange) !important; border-top-width: 3px !important; }
+.btn-ps { background: var(--ps-orange); border-color: var(--ps-orange); color: #fff; }
+.btn-ps:hover, .btn-ps:focus { background: var(--ps-orange-dark); border-color: var(--ps-orange-dark); color: #fff; }
+.btn-outline-ps { border-color: var(--ps-orange); color: var(--ps-orange-dark); background: #fff; }
+.btn-outline-ps:hover { background: var(--ps-orange); color: #fff; }
+.form-control:focus { border-color: var(--ps-orange); box-shadow: 0 0 0 .2rem rgba(239,125,0,.2); }
+
+.ps-nav { border-bottom: 3px solid var(--ps-orange) !important; }
+.ps-brand-sub { font-weight: 600; color: #555; border-left: 2px solid var(--ps-orange); padding-left: .5rem; }
+.ps-hero { background: linear-gradient(135deg, #fff 0%, var(--ps-soft) 100%); border-bottom: 1px solid #eee; }
+.ps-kicker { color: var(--ps-orange-dark); letter-spacing: .08em; font-weight: 600; }
+.display-5 { font-size: 2.6rem; line-height: 1.15; }
+@media (max-width: 575.98px) { .display-5 { font-size: 1.9rem; } .display-4 { font-size: 2.4rem; } .display-3 { font-size: 3rem; } }
+
+.ps-card-link { color: inherit; text-decoration: none !important; transition: transform .1s, box-shadow .1s; border-left: 3px solid var(--ps-orange); }
+.ps-card-link:hover { transform: translateY(-2px); box-shadow: 0 .4rem 1rem rgba(0,0,0,.08); color: inherit; }
+.ps-steps { padding-left: 1.2rem; }
+.ps-steps li { margin-bottom: .25rem; text-transform: capitalize; }
+.ps-empty { border: 2px dashed #ddd; border-radius: .5rem; background: #fff; }
+.ps-faded { opacity: .35; }
+.ps-footer { background: #222; color: #ddd; }
+.ps-footer a { color: #fff; }
+.ps-pre { background: #1f2328; color: #f1f1f1; padding: .75rem; border-radius: .35rem; font-size: .78rem; white-space: pre-wrap; word-break: break-word; }
+.ps-pre-scroll { max-height: 18rem; overflow: auto; }
+
+/* status badges (custom tag ps:statusBadge) */
+.ps-badge { font-size: .78rem; padding: .35em .65em; border-radius: 1rem; text-transform: capitalize; color: #fff; display: inline-flex; align-items: center; }
+.ps-badge-lg { font-size: .95rem; padding: .45em .9em; }
+.ps-dot { width: .5em; height: .5em; border-radius: 50%; background: rgba(255,255,255,.85); margin-right: .4em; display: inline-block; }
+.ps-st-received { background: #6c757d; }
+.ps-st-cutting { background: var(--ps-orange); }
+.ps-st-bending { background: #d35400; }
+.ps-st-welding { background: #8e44ad; }
+.ps-st-coating { background: #2c7be5; }
+.ps-st-inspection { background: #138496; }
+.ps-st-dispatched { background: #28a745; }
+
+/* stage progress bar on the tracking page */
+.ps-progress { display: flex; list-style: none; padding: 0; margin: 0; counter-reset: st; }
+.ps-progress li { flex: 1; text-align: center; position: relative; font-size: .72rem; color: #999; text-transform: capitalize; }
+.ps-progress li::before { content: ""; position: absolute; top: .55rem; left: -50%; width: 100%; height: 3px; background: #e2e2e2; z-index: 0; }
+.ps-progress li:first-child::before { display: none; }
+.ps-progress-dot { display: block; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #e2e2e2; margin: 0 auto .3rem; position: relative; z-index: 1; border: 3px solid #fff; box-shadow: 0 0 0 1px #ddd; }
+.ps-progress li.done, .ps-progress li.current { color: var(--ps-ink); }
+.ps-progress li.done::before, .ps-progress li.current::before { background: var(--ps-orange); }
+.ps-progress li.done .ps-progress-dot { background: var(--ps-orange); }
+.ps-progress li.current .ps-progress-dot { background: #fff; box-shadow: 0 0 0 3px var(--ps-orange); }
+.ps-progress li.current { font-weight: 700; }
+@media (max-width: 575.98px) {
+  .ps-progress { flex-direction: column; }
+  .ps-progress li { text-align: left; display: flex; align-items: center; padding: .25rem 0; font-size: .85rem; }
+  .ps-progress li::before { display: none; }
+  .ps-progress-dot { margin: 0 .6rem 0 0; }
+}
+
+/* event timeline */
+.ps-timeline li { position: relative; padding: 0 0 1rem 1.2rem; border-left: 2px solid #e2e2e2; margin-left: .4rem; }
+.ps-timeline li::before { content: ""; position: absolute; left: -.42rem; top: .35rem; width: .7rem; height: .7rem; border-radius: 50%; background: #ccc; }
+.ps-timeline li.latest::before { background: var(--ps-orange); }
+.ps-timeline li:last-child { border-left-color: transparent; }
+
+/* staff filter chips */
+.ps-chips { gap: .4rem; }
+.ps-chip { border: 1px solid #ddd; border-radius: 1rem; padding: .2rem .7rem; margin: 0 .4rem .4rem 0; cursor: pointer; text-transform: capitalize; background: #fff; font-size: .85rem; }
+.ps-chip input { margin-right: .25rem; vertical-align: middle; }
+.ps-chip.on { border-color: var(--ps-orange); background: var(--ps-soft); }
+.ps-table td, .ps-table th { vertical-align: middle; }
+.ps-break { table-layout: fixed; width: 100%; }
+.ps-break th { width: 30%; }
+.ps-break td, .ps-break th { word-break: break-word; overflow-wrap: anywhere; }
