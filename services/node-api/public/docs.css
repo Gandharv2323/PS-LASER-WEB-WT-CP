@@ -1,0 +1,48 @@
+:root {
+  --ps-orange: #ef7d00;
+  --ps-orange-dark: #d96f00;
+  --ps-orange-tint: #fff4e8;
+  --ink: #141414;
+  --muted: #5c5c5c;
+  --bg: #ffffff;
+  --panel: #f7f7f7;
+  --code-bg: #1d1d1d;
+  --code-ink: #f5f5f5;
+  --border: #e6e6e6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2f2f2;
+    --muted: #a8a8a8;
+    --bg: #121212;
+    --panel: #1c1c1c;
+    --code-bg: #0a0a0a;
+    --border: #2c2c2c;
+    --ps-orange-tint: #2a1a08;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+.top { border-top: 6px solid var(--ps-orange); background: var(--ps-orange-tint); padding: 20px 0; }
+.top-inner { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.logo { height: 48px; width: auto; background: #fff; border-radius: 6px; padding: 4px 8px; }
+h1 { margin: 0; font-size: 1.6rem; }
+.sub { margin: 0; color: var(--muted); }
+.badge { margin-left: auto; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; background: var(--panel); border: 1px solid var(--border); }
+.badge.up { background: #e7f6ec; color: #136c2e; border-color: #b6e2c3; }
+.badge.down { background: #fdecea; color: #a12a1c; border-color: #f2c1bb; }
+main { padding: 24px 16px 8px; }
+section { margin-bottom: 28px; }
+.endpoint { border-left: 4px solid var(--ps-orange); background: var(--panel); padding: 12px 18px; border-radius: 0 8px 8px 0; }
+h2 { font-size: 1.1rem; margin: 0 0 6px; font-family: ui-monospace, Consolas, monospace; }
+.m { display: inline-block; min-width: 58px; text-align: center; font-size: 0.8rem; padding: 2px 6px; border-radius: 4px; color: #fff; margin-right: 6px; }
+.m.get { background: #2b7a3d; }
+.m.post { background: var(--ps-orange); }
+.m.patch { background: #6a4bb5; }
+.lock { font: 600 0.75rem system-ui, sans-serif; color: var(--ps-orange-dark); border: 1px solid var(--ps-orange); border-radius: 4px; padding: 1px 6px; margin-left: 6px; }
+pre { background: var(--code-bg); color: var(--code-ink); padding: 12px 14px; border-radius: 6px; overflow-x: auto; font-size: 0.85rem; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
+.muted { color: var(--muted); }
+a { color: var(--ps-orange-dark); }
+footer { padding: 16px; border-top: 1px solid var(--border); font-size: 0.9rem; }

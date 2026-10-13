@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PS Laser Enquiry API</title>
+  <meta name="description" content="Node.js + Express enquiry and drawing-upload API for PS Laser, Pune.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <img src="logo.png" alt="PS Laser" class="logo" width="160" height="48">
+      <div>
+        <h1>Enquiry API</h1>
+        <p class="sub">Node.js 24 + Express &middot; port 4000 &middot; CS3111 Unit VI</p>
+      </div>
+      <span id="status" class="badge">checking&hellip;</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <p>Stores website enquiries (with an optional CAD drawing) in the shared <code>pslaser</code> MySQL database and
+        returns a WhatsApp link so every quote stays WhatsApp-first. Staff routes accept the JWT issued by the Spring Boot
+        API (<code>POST :8081/api/auth/login</code>).</p>
+      <p id="catalogue-summary" class="muted"></p>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m get">GET</span> /api/health</h2>
+      <p>Process liveness + MySQL ping + <code>os</code> facts. Shape: <code>{ ok: true, db: true|false, ... }</code></p>
+      <pre>curl http://localhost:4000/api/health</pre>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m post">POST</span> /api/enquiries</h2>
+      <p>Public, rate-limited. JSON or <code>multipart/form-data</code>. Fields: <code>name</code>, <code>phone</code>,
+        <code>message</code> (required), <code>email</code>, <code>serviceSlug</code>, <code>machineSlug</code>,
+        <code>source</code> (next | react | php | laravel | jsp | spring | node; default node).
+        Optional file <code>drawing</code>: dxf, dwg, pdf, png, jpg &le; 10 MB. Returns <code>201 { id, whatsappUrl }</code>.</p>
+      <pre>curl -X POST http://localhost:4000/api/enquiries \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Asha Patil","phone":"9876543210","serviceSlug":"laser-cutting","message":"50 pcs MS 3 mm brackets"}'</pre>
+      <pre>curl -X POST http://localhost:4000/api/enquiries \
+  -F name="Asha Patil" -F phone=9876543210 -F message="Please quote this part" \
+  -F drawing=@bracket.dxf</pre>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m get">GET</span> /api/enquiries <span class="lock">admin / staff</span></h2>
+      <p>Paginated list, newest first. Query: <code>page</code>, <code>pageSize</code> (&le; 100), <code>status</code>
+        (new | contacted | quoted | won | lost). Returns <code>{ items, page, pageSize, total, totalPages }</code>.</p>
+      <pre>curl "http://localhost:4000/api/enquiries?status=new&amp;page=1" -H "Authorization: Bearer $TOKEN"</pre>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m patch">PATCH</span> /api/enquiries/:id <span class="lock">admin / staff</span></h2>
+      <p>Body <code>{ "status": "contacted" }</code>. Returns the updated enquiry.</p>
+      <pre>curl -X PATCH http://localhost:4000/api/enquiries/12 -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" -d '{"status":"contacted"}'</pre>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m get">GET</span> /api/enquiries/:id/drawing <span class="lock">admin / staff</span></h2>
+      <p>Streams the private drawing upload (uploads are never served as static files).</p>
+      <pre>curl -OJ http://localhost:4000/api/enquiries/12/drawing -H "Authorization: Bearer $TOKEN"</pre>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m get">GET</span> /api/catalogue</h2>
+      <p>Machines + services from MySQL, cached in memory for 60 s (<code>X-Cache: HIT|MISS</code>).</p>
+      <pre>curl http://localhost:4000/api/catalogue</pre>
+    </section>
+
+    <section class="endpoint">
+      <h2><span class="m get">GET</span> /api/logs/requests <span class="lock">admin</span></h2>
+      <p>Tail of the request log streamed from disk (<code>?bytes=8192</code>), or <code>?download=1</code> for the whole file.</p>
+      <pre>curl "http://localhost:4000/api/logs/requests?bytes=2048" -H "Authorization: Bearer $TOKEN"</pre>
+    </section>
+
+    <section>
+      <h2>Errors</h2>
+      <p>Same shape as the Spring API: <code>{ status, error, message, fieldErrors?, requestId }</code>.
+        401 = missing/invalid token, 403 = wrong role, 413 = file too large, 429 = rate limited.</p>
+    </section>
+  </main>
+
+  <footer class="wrap muted">PS Laser &middot; Velu, Bhor, Pune &middot; <a href="https://wa.me/917719976990">WhatsApp +91 77199 76990</a></footer>
+  <script src="docs.js" defer></script>
+</body>
+</html>

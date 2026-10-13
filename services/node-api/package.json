@@ -1,0 +1,40 @@
+{
+  "name": "pslaser-node-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PS Laser Enquiry API - CS3111 Unit VI (Node.js + Express)",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "start:raw": "node src/raw-server.js",
+    "test": "node --test --test-concurrency=1 \"test/**/*.test.js\"",
+    "lint": "node scripts/lint.js"
+  },
+  "keywords": [
+    "pslaser",
+    "express",
+    "mysql",
+    "cs3111"
+  ],
+  "author": "PS Laser",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cors": "2.8.6",
+    "dotenv": "18.0.7",
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.1",
+    "helmet": "8.3.0",
+    "jsonwebtoken": "9.0.3",
+    "multer": "2.4.0",
+    "mysql2": "3.24.6",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "supertest": "7.3.1"
+  }
+}
