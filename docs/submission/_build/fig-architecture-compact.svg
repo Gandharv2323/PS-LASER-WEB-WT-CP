@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d1d1b"/></marker><marker id="ahs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0b5285"/></marker></defs>
+<rect width="1200" height="700" fill="#fff"/>
+<rect x="6" y="8" width="1188" height="92" rx="8" fill="#fbf3e9" stroke="#d6d9dc"/>
+<text x="16" y="94" font-size="12" font-weight="700" fill="#5b6168" text-anchor="start">CLIENT</text>
+<rect x="6" y="112" width="1188" height="168" rx="8" fill="#f6f7f8" stroke="#d6d9dc"/>
+<text x="16" y="125" font-size="12" font-weight="700" fill="#5b6168" text-anchor="start">PRESENTATION</text>
+<rect x="6" y="292" width="1188" height="150" rx="8" fill="#fbf3e9" stroke="#d6d9dc"/>
+<text x="16" y="305" font-size="12" font-weight="700" fill="#5b6168" text-anchor="start">API</text>
+<rect x="6" y="452" width="1188" height="100" rx="8" fill="#f6f7f8" stroke="#d6d9dc"/>
+<text x="16" y="465" font-size="12" font-weight="700" fill="#5b6168" text-anchor="start">DATA</text>
+<rect x="6" y="564" width="1188" height="130" rx="8" fill="#fbf3e9" stroke="#d6d9dc"/>
+<text x="16" y="577" font-size="12" font-weight="700" fill="#5b6168" text-anchor="start">SHOP</text>
+<rect x="24" y="22" width="210" height="44" rx="7" fill="#3d4650"/>
+<text x="129" y="50" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">Customer (browser)</text>
+<rect x="264" y="22" width="210" height="44" rx="7" fill="#3d4650"/>
+<text x="369" y="50" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">PS Laser staff / owner</text>
+<rect x="900" y="22" width="280" height="44" rx="7" fill="#e9f5ee" stroke="#2e8b57" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="1040" y="50" font-size="16" font-weight="700" fill="#1d6b42" text-anchor="middle">WhatsApp (external, wa.me)</text>
+<path d="M129,66 V100 M369,66 V100 M125,100 H1060" stroke="#1d1d1b" stroke-width="2" fill="none"/>
+<rect x="612.3199999999999" y="81" width="175.36" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="700" y="95" font-size="13" font-weight="600" fill="#222" text-anchor="middle">HTTP(S) from the browser</text>
+<path d="M125,100 V138" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M345,100 V138" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M565,100 V138" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M815,100 V138" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M1065,100 V138" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="20" y="138" width="210" height="124" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M20,170 V145 a7,7 0 0 1 7,-7 H223 a7,7 0 0 1 7,7 V170 Z" fill="#EF7D00"/>
+<text x="30" y="160" font-size="17" font-weight="700" fill="#fff" text-anchor="start">PHP estimator</text>
+<text x="220" y="160" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:8000</text>
+<text x="30" y="191" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">PHP 8.2 · PDO</text>
+<text x="30" y="211" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">estimate · upload</text>
+<text x="30" y="231" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">enquiry form</text>
+<rect x="240" y="138" width="210" height="124" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M240,170 V145 a7,7 0 0 1 7,-7 H443 a7,7 0 0 1 7,7 V170 Z" fill="#EF7D00"/>
+<text x="250" y="160" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Laravel admin</text>
+<text x="440" y="160" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:8001</text>
+<text x="250" y="191" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Laravel 12 · Eloquent</text>
+<text x="250" y="211" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">rates · work orders</text>
+<text x="250" y="231" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">enquiries · machines</text>
+<rect x="460" y="138" width="210" height="124" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M460,170 V145 a7,7 0 0 1 7,-7 H663 a7,7 0 0 1 7,7 V170 Z" fill="#EF7D00"/>
+<text x="470" y="160" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Servlet / JSP</text>
+<text x="660" y="160" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:8080</text>
+<text x="470" y="191" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Tomcat 8.5 · JDBC</text>
+<text x="470" y="211" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">order tracking</text>
+<text x="470" y="231" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">staff status desk</text>
+<rect x="690" y="138" width="250" height="124" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M690,170 V145 a7,7 0 0 1 7,-7 H933 a7,7 0 0 1 7,7 V170 Z" fill="#EF7D00"/>
+<text x="700" y="160" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Next.js website</text>
+<text x="930" y="160" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:3001</text>
+<text x="700" y="191" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">React 19 · TypeScript</text>
+<text x="700" y="211" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">8 pages · /quote /track</text>
+<text x="700" y="231" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">/dashboard · BFF routes</text>
+<rect x="950" y="138" width="230" height="124" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M950,170 V145 a7,7 0 0 1 7,-7 H1173 a7,7 0 0 1 7,7 V170 Z" fill="#EF7D00"/>
+<text x="960" y="160" font-size="17" font-weight="700" fill="#fff" text-anchor="start">React portal</text>
+<text x="1170" y="160" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:5173</text>
+<text x="960" y="191" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Vite · Redux Toolkit</text>
+<text x="960" y="211" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">catalogue · quote cart</text>
+<text x="960" y="231" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">login · tracking</text>
+<rect x="500" y="312" width="160" height="112" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M500,344 V319 a7,7 0 0 1 7,-7 H653 a7,7 0 0 1 7,7 V344 Z" fill="#6b7480"/>
+<text x="510" y="334" font-size="17" font-weight="700" fill="#fff" text-anchor="start">File storage</text>
+<text x="510" y="365" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">drawings (private)</text>
+<text x="510" y="385" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">request/event logs</text>
+<rect x="690" y="312" width="250" height="112" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M690,344 V319 a7,7 0 0 1 7,-7 H933 a7,7 0 0 1 7,7 V344 Z" fill="#EF7D00"/>
+<text x="700" y="334" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Node / Express</text>
+<text x="930" y="334" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:4000</text>
+<text x="700" y="365" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Express 5 · zod · multer</text>
+<text x="700" y="385" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">enquiry + drawing upload</text>
+<text x="700" y="405" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">JWT for admin/staff</text>
+<rect x="950" y="312" width="230" height="112" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M950,344 V319 a7,7 0 0 1 7,-7 H1173 a7,7 0 0 1 7,7 V344 Z" fill="#EF7D00"/>
+<text x="960" y="334" font-size="17" font-weight="700" fill="#fff" text-anchor="start">Spring Boot</text>
+<text x="1170" y="334" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:8081</text>
+<text x="960" y="365" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Spring Boot 3.5 · JPA</text>
+<text x="960" y="385" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">JWT · estimate · tracking</text>
+<text x="960" y="405" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">events · STOMP push</text>
+<path d="M780,262 V312" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M850,262 L1000,312" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M1030,262 L880,312" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M1140,262 V312" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="723.77" y="278" width="58.230000000000004" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="778" y="292" font-size="13" font-weight="600" fill="#222" text-anchor="end">enquiry</text>
+<rect x="892.44" y="270" width="65.12" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="925" y="284" font-size="13" font-weight="600" fill="#222" text-anchor="middle">REST+JWT</text>
+<rect x="1076.88" y="278" width="65.12" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1138" y="292" font-size="13" font-weight="600" fill="#222" text-anchor="end">REST+JWT</text>
+<path d="M690,368 H660" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="20" y="468" width="920" height="80" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M20,500 V475 a7,7 0 0 1 7,-7 H933 a7,7 0 0 1 7,7 V500 Z" fill="#0b5285"/>
+<text x="30" y="490" font-size="17" font-weight="700" fill="#fff" text-anchor="start">MySQL / MariaDB 10.4 - database "pslaser" (one shared schema)</text>
+<text x="930" y="490" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:3306</text>
+<text x="30" y="521" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">users · machines · services · materials · rates (SAMPLE) · settings · enquiries · uploads · quotes · work_orders · work_order_events</text>
+<rect x="960" y="468" width="220" height="80" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"/>
+<path d="M960,500 V475 a7,7 0 0 1 7,-7 H1173 a7,7 0 0 1 7,7 V500 Z" fill="#4f7f3a"/>
+<text x="970" y="490" font-size="17" font-weight="700" fill="#fff" text-anchor="start">MongoDB</text>
+<text x="1170" y="490" font-size="16" font-weight="700" fill="#fff" text-anchor="end">:27017</text>
+<text x="970" y="521" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">activity_log (audit events)</text>
+<path d="M795,424 V468" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="795" y="438" width="51.34" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="799" y="452" font-size="13" font-weight="600" fill="#222" text-anchor="start">mysql2</text>
+<path d="M965,424 L915,468" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="846" y="432" width="37.56" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="850" y="446" font-size="13" font-weight="600" fill="#222" text-anchor="start">JDBC</text>
+<path d="M1065,424 V468" fill="none" stroke="#1d1d1b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1065" y="438" width="51.34" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1069" y="452" font-size="13" font-weight="600" fill="#222" text-anchor="start">events</text>
+<path d="M125,262 V468" fill="none" stroke="#0b5285" stroke-width="2" marker-end="url(#ahs)"/>
+<path d="M345,262 V468" fill="none" stroke="#0b5285" stroke-width="2" marker-end="url(#ahs)"/>
+<path d="M480,262 V468" fill="none" stroke="#0b5285" stroke-width="2" marker-end="url(#ahs)"/>
+<rect x="109.66499999999999" y="366" width="30.67" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="125" y="380" font-size="13" font-weight="600" fill="#222" text-anchor="middle">PDO</text>
+<rect x="312.44" y="366" width="65.12" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="345" y="380" font-size="13" font-weight="600" fill="#222" text-anchor="middle">Eloquent</text>
+<rect x="461.22" y="386" width="37.56" height="20" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="480" y="400" font-size="13" font-weight="600" fill="#222" text-anchor="middle">JDBC</text>
+<text x="145" y="330" font-size="13" font-weight="700" fill="#0b5285" text-anchor="start">direct SQL (blue):</text>
+<text x="145" y="348" font-size="13" font-weight="700" fill="#0b5285" text-anchor="start">no API hop</text>
+<path d="M1180,200 H1190 V66" fill="none" stroke="#2e8b57" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<rect x="20" y="590" width="1160" height="96" rx="7" fill="#fff" stroke="#1d1d1b" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M20,622 V597 a7,7 0 0 1 7,-7 H1173 a7,7 0 0 1 7,7 V622 Z" fill="#8a8f94"/>
+<text x="30" y="612" font-size="17" font-weight="700" fill="#fff" text-anchor="start">PS Laser shop, Velu, Bhor (physical; NOT connected to the software)</text>
+<text x="30" y="643" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Fiber lasers 3 kW + 1.5 kW · press brake 175 T · turret punches 32 T / 16 T · laser welder · powder-coat plant</text>
+<text x="30" y="663" font-size="15" font-weight="400" fill="#1d1d1b" text-anchor="start">Staff read estimates/enquiries and update work-order status manually in the admin screens.</text>
+</svg>
