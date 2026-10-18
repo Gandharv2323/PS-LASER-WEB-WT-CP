@@ -1,0 +1,129 @@
+# PS Laser production stack (single server). NOT yet built or run: see deploy/DEPLOY.md before use.
+#   cd deploy && cp .env.example .env   (fill every CHANGE_ME)  &&  docker compose up -d --build
+# Only Caddy publishes ports (80/443). MySQL, MongoDB, Spring and Node stay on the private compose network.
+name: pslaser
+
+services:
+  mysql:
+    image: mariadb:10.11            # project was tested on XAMPP MariaDB 10.4.32; 10.11 is a supported LTS (untested here)
+    restart: unless-stopped
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in .env}
+      MARIADB_DATABASE: pslaser
+      MARIADB_USER: pslaser
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      # first start only (empty data dir): create schema, load catalogue + sample rates, remove demo data/seed admin
+      - ../services/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ../services/db/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+      - ./db/03-production-cleanup.sql:/docker-entrypoint-initdb.d/03-production-cleanup.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  mongo:
+    image: mongo:7                  # Spring activity log only; persistent volume (the embedded dev instance loses data)
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+
+  spring:
+    build: ../services/spring-api
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      mongo: { condition: service_started }
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_HOST: mysql
+      DB_NAME: pslaser
+      DB_USER: pslaser
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      MONGO_HOST: mongo
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in .env (32+ bytes)}
+      CORS_ORIGINS: https://${DOMAIN},https://www.${DOMAIN},https://admin.${DOMAIN}
+
+  node:
+    build: ../services/node-api
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+    environment:
+      NODE_ENV: production
+      PORT: "4000"
+      DB_HOST: mysql
+      DB_NAME: pslaser
+      DB_USER: pslaser
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      CORS_ORIGINS: https://${DOMAIN},https://www.${DOMAIN}
+    volumes:
+      - node_storage:/app/storage   # private drawing uploads + logs
+
+  web:
+    build:
+      context: ..
+      dockerfile: deploy/docker/web.Dockerfile
+      args:
+        NEXT_PUBLIC_SPRING_WS_URL: wss://api.${DOMAIN}/ws   # baked into the browser bundle at build time
+    restart: unless-stopped
+    depends_on:
+      - spring
+      - node
+    environment:
+      SPRING_API_URL: http://spring:8081
+      NODE_API_URL: http://node:4000
+      JWT_SECRET: ${JWT_SECRET}
+
+  admin:
+    build: ../services/laravel-admin
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+    environment:
+      APP_NAME: PS Laser Admin
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: ${APP_KEY:?set APP_KEY in .env}
+      APP_URL: https://admin.${DOMAIN}
+      DB_CONNECTION: mysql
+      DB_HOST: mysql
+      DB_PORT: "3306"
+      DB_DATABASE: pslaser
+      DB_USERNAME: pslaser
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      SESSION_DRIVER: file
+      SESSION_SECURE_COOKIE: "true"
+      LOG_CHANNEL: stderr
+      PSLASER_ASSET_BASE: https://${DOMAIN}
+    volumes:
+      - admin_storage:/var/www/html/storage
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - web
+      - spring
+      - admin
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  mysql_data:
+  mongo_data:
+  node_storage:
+  admin_storage:
+  caddy_data:
+  caddy_config:

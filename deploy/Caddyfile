@@ -1,0 +1,36 @@
+# Caddy obtains and renews HTTPS certificates automatically once the DNS A records point at this server.
+# {$DOMAIN} comes from the caddy service environment (see docker-compose.yml).
+
+www.{$DOMAIN} {
+	redir https://{$DOMAIN}{uri} permanent
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+	reverse_proxy web:3000
+}
+
+# Only the live-dashboard WebSocket is exposed from Spring. Browsers do not need the REST API:
+# the website calls Spring and Node from its own server over the private network.
+# If you later deploy the React portal, open the extra paths it needs here (and nowhere else).
+api.{$DOMAIN} {
+	@ws path /ws /ws/* /ws-sockjs /ws-sockjs/*
+	handle @ws {
+		reverse_proxy spring:8081
+	}
+	handle {
+		respond "Not found" 404
+	}
+}
+
+# Staff back office (Laravel). Consider restricting by IP once the owner's addresses are known.
+admin.{$DOMAIN} {
+	encode zstd gzip
+	reverse_proxy admin:80
+}

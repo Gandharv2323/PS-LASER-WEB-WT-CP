@@ -49,3 +49,7 @@ docker-compose.yml
 README.md
 CHANGELOG.md
 LICENSE
+
+# Deployment / other services (not needed to build the website image)
+services
+deploy
