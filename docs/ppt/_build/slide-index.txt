@@ -1,0 +1,55 @@
+Slide 1 — Title
+Slide 2 — Project information
+Slide 3 — Introduction
+Slide 4 — Business and machine context
+Slide 5 — Problem statement
+Slide 6 — Aim
+Slide 7 — Objectives
+Slide 8 — Literature review: foundations used
+Slide 9 — Comparison of architectural approaches and gap
+Slide 10 — Technology stack overview
+Slide 11 — Frontend technologies and why
+Slide 12 — Backend technologies and why
+Slide 13 — Data, infrastructure and tooling
+Slide 14 — Technology to syllabus unit map
+Slide 15 — System architecture overview
+Slide 16 — Architectural decisions
+Slide 17 — DFD Level 0 — context diagram
+Slide 18 — DFD Level 1 — decomposition
+Slide 19 — DFD Level 1 — process and data-store dictionary
+Slide 20 — DFD Level 2 — process 2.0 Compute Estimate
+Slide 21 — DFD Level 2 — work-order lifecycle (6.0, 7.0, 5.0)
+Slide 22 — Data model (MySQL database pslaser)
+Slide 23 — Unit V — front-end layered architecture (Next.js Web Application)
+Slide 24 — Unit V — advanced component patterns used
+Slide 25 — Unit V — rendering strategies and performance tuning
+Slide 26 — Security architecture
+Slide 27 — Deployment view
+Slide 28 — Methodology overview and module list
+Slide 29 — M1 — Content and Catalogue Delivery Module
+Slide 30 — M2 — Estimation Engine Module
+Slide 31 — M2 — worked example (reference case)
+Slide 32 — M3 — Enquiry and Drawing Ingestion Module
+Slide 33 — M4 — Authentication and Access-Control Module
+Slide 34 — M5 — Order Tracking Module
+Slide 35 — M6 — Work-Order Management Module
+Slide 36 — M7 — Event Processing and Live Update Module
+Slide 37 — M8 — Administration and Rate-Card Management Module (Laravel)
+Slide 38 — M9 — Customer Portal Module (React Portal Application)
+Slide 39 — M10 — Stand-alone Server-Side Applications (PHP and Servlet/JSP)
+Slide 40 — M11 — Shared Contract and Data Layer
+Slide 41 — Module interaction matrix
+Slide 42 — Functional results
+Slide 43 — Measured results
+Slide 44 — Coverage of the syllabus and platform capability
+Slide 45 — Screens (gallery slide)
+Slide 46 — Software development model used
+Slide 47 — Test strategy
+Slide 48 — Test cases executed
+Slide 49 — Automated test results and gaps
+Slide 50 — Issues found and resolved
+Slide 51 — Advantages
+Slide 52 — Disadvantages and limitations
+Slide 53 — Conclusion and future scope
+Slide 54 — References
+Slide 55 — Thank you / Questions

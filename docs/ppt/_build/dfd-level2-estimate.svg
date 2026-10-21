@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="800" viewBox="0 0 1760 800" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d1d1b"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b5285"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker>
+</defs><rect width="1760" height="800" fill="#fff"/>
+<text x="880" y="34" font-size="24" font-weight="700" fill="#1d1d1b" text-anchor="middle">DFD Level 2 — Process 2.0 Compute Estimate</text>
+<rect x="24" y="294" width="170" height="150" fill="#d9dcdf"/><rect x="20" y="290" width="170" height="150" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="105" y="320" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">E1</text>
+<text x="105" y="338" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">Client</text>
+<text x="105" y="354" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">(Next.js BFF /</text>
+<text x="105" y="370" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">React / PHP / JSP)</text>
+<circle cx="330" cy="365" r="66" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="270" y1="337.28" x2="390" y2="337.28" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="330" y="328.7" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.1</text>
+<text x="330" y="353.28" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Validate</text>
+<text x="330" y="367.78" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Request</text>
+<circle cx="580" cy="365" r="66" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="520" y1="337.28" x2="640" y2="337.28" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="580" y="328.7" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.2</text>
+<text x="580" y="353.28" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Resolve Material</text>
+<text x="580" y="367.78" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">&amp; Rate Band</text>
+<circle cx="830" cy="365" r="66" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="770" y1="337.28" x2="890" y2="337.28" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="830" y="328.7" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.3</text>
+<text x="830" y="353.28" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Compute Cost</text>
+<text x="830" y="367.78" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Lines</text>
+<circle cx="1080" cy="365" r="66" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1020" y1="337.28" x2="1140" y2="337.28" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1080" y="328.7" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.4</text>
+<text x="1080" y="353.28" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Round, Quantity</text>
+<text x="1080" y="367.78" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">&amp; GST</text>
+<circle cx="1330" cy="365" r="66" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1270" y1="337.28" x2="1390" y2="337.28" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1330" y="328.7" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.5</text>
+<text x="1330" y="353.28" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Compose</text>
+<text x="1330" y="367.78" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Response</text>
+<circle cx="1330" cy="640" r="66" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1270" y1="612.28" x2="1390" y2="612.28" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1330" y="603.7" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.6</text>
+<text x="1330" y="628.28" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Persist Quote</text>
+<text x="1330" y="642.78" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">(optional)</text>
+<path d="M680,110 H430 V166 H680" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="476" y1="110" x2="476" y2="166" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="453" y="143" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D2</text>
+<text x="484" y="134" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Catalogue</text>
+<text x="484" y="149" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">materials</text>
+<path d="M1010,110 H740 V166 H1010" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="786" y1="110" x2="786" y2="166" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="763" y="143" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D3</text>
+<text x="794" y="134" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Rate card</text>
+<text x="794" y="149" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">rates, settings</text>
+<path d="M1670,612 H1440 V668 H1670" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1486" y1="612" x2="1486" y2="668" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="1463" y="645" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D5</text>
+<text x="1494" y="636" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Quotes</text>
+<text x="1494" y="651" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">quotes</text>
+<rect x="1484" y="194" width="210" height="90" fill="#d9dcdf"/><rect x="1480" y="190" width="210" height="90" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="1585" y="219" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">7.0</text>
+<text x="1585" y="237" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">Log &amp; Broadcast Events</text>
+<text x="1585" y="253" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">(Level 1 process)</text>
+<polyline points="190,365 263,365" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="218.625" y="345.5" width="82.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="260" y="357" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">EstimateInput</text>
+<polyline points="397,365 513,365" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="419.375" y="345.5" width="71.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="455" y="357" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">valid input</text>
+<polyline points="647,365 763,365" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="649.25" y="345.5" width="111.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="705" y="357" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">rate row + density</text>
+<polyline points="897,365 1013,365" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="922.25" y="345.5" width="65.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="955" y="357" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">cost lines</text>
+<polyline points="1147,365 1263,365" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1183.75" y="345.5" width="42.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1205" y="357" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">totals</text>
+<polyline points="580,166 570,298" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="380.5" y="223.5" width="134.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="512" y="235" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="end">max thickness, density</text>
+<polyline points="800,166 600,297" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="648.625" y="238.5" width="82.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="690" y="250" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="middle">rate band row</text>
+<polyline points="900,166 850,298" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="902" y="193.5" width="123" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="905" y="205" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="start">bend + coating rates</text>
+<polyline points="960,166 1070,298" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="1057" y="248.5" width="111.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1060" y="260" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="start">GST %, sample flag</text>
+<polyline points="1330,432 1330,540 105,540 105,440" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="689" y="522.5" width="422" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="900" y="534" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">EstimateResult JSON (breakdown, perPart, subtotal, gst, total, isSample)</text>
+<polyline points="330,432 330,528" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="333" y="468.5" width="134.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="336" y="480" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="start">HTTP 400 + fieldErrors</text>
+<polyline points="580,432 580,528" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="583" y="468.5" width="105.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="586" y="480" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="start">400: no rate band</text>
+<polyline points="1380,303 1480,250" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="1467" y="308.5" width="111.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1470" y="320" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="start">EstimateCalculated</text>
+<polyline points="1330,540 1330,574" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1333" y="548.5" width="65.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1336" y="560" font-size="11.5" font-weight="600" fill="#222" text-anchor="start">quote data</text>
+<polyline points="1396,640 1440,640" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="40" y="600" width="1000" height="160" rx="6" fill="#fffbe6" stroke="#c9b458"/>
+<text x="50" y="620" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Process 2.1: schema validation (material code, numeric ranges, quantity >= 1, part inside the 3000 x 1500 mm bed).</text>
+<text x="50" y="637" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Process 2.2: SELECT the rate row whose thickness band contains thickness_mm; reject thickness above the material maximum or in a gap.</text>
+<text x="50" y="654" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Process 2.3: area = L x W / 1e6; weight = area x t x density; material, cutting, piercing, bending and coating lines.</text>
+<text x="50" y="671" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Process 2.4: each line rounded half-up to 2 dp; perPart = sum; subtotal = round2(perPart x qty); gst = round2(subtotal x g / 100).</text>
+<text x="50" y="688" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Process 2.5: build EstimateResult, set isSample from settings.rates_are_sample, publish EstimateCalculated.</text>
+<text x="50" y="705" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Process 2.6 runs only for POST /api/quotes (stores quote number PSL-Q-YYYYMMDD-####).</text>
+<text x="50" y="722" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Offline fallback: if Spring is unreachable, the Next.js route handler runs the same formula in TypeScript (source = offline).</text>
+</svg>

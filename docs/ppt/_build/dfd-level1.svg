@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1150" viewBox="0 0 1960 1150" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d1d1b"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b5285"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker>
+</defs><rect width="1960" height="1150" fill="#fff"/>
+<text x="980" y="34" font-size="24" font-weight="700" fill="#1d1d1b" text-anchor="middle">DFD Level 1 — PS Laser Web Platform</text>
+<rect x="24" y="74" width="170" height="960" fill="#d9dcdf"/><rect x="20" y="70" width="170" height="960" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="105" y="405" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">E1</text>
+<text x="105" y="423" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">Client</text>
+<text x="105" y="439" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">(browser)</text>
+<rect x="1764" y="384" width="180" height="640" fill="#d9dcdf"/><rect x="1760" y="380" width="180" height="640" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="1850" y="640" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">E2</text>
+<text x="1850" y="658" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">Staff user</text>
+<text x="1850" y="674" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">(admin / staff)</text>
+<rect x="1154" y="74" width="210" height="64" fill="#d9dcdf"/><rect x="1150" y="70" width="210" height="64" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="1255" y="96" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">E3</text>
+<text x="1255" y="114" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">WhatsApp (external)</text>
+<circle cx="450" cy="130" r="68" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="388" y1="101.44" x2="512" y2="101.44" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="450" y="92.6" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">1.0</text>
+<text x="450" y="117.44" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Serve Content</text>
+<text x="450" y="131.94" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">&amp; Catalogue</text>
+<circle cx="450" cy="340" r="68" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="388" y1="311.44" x2="512" y2="311.44" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="450" y="302.6" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">2.0</text>
+<text x="450" y="327.44" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Compute</text>
+<text x="450" y="341.94" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Estimate</text>
+<circle cx="450" cy="550" r="68" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="388" y1="521.44" x2="512" y2="521.44" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="450" y="512.6" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">3.0</text>
+<text x="450" y="537.44" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Capture Enquiry</text>
+<text x="450" y="551.94" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">&amp; Drawing</text>
+<circle cx="450" cy="760" r="68" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="388" y1="731.44" x2="512" y2="731.44" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="450" y="722.6" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">5.0</text>
+<text x="450" y="747.44" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Track</text>
+<text x="450" y="761.94" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Order</text>
+<circle cx="450" cy="965" r="68" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="388" y1="936.44" x2="512" y2="936.44" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="450" y="927.6" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">4.0</text>
+<text x="450" y="952.44" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Authenticate</text>
+<text x="450" y="966.94" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">&amp; Authorise</text>
+<circle cx="1400" cy="470" r="70" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1336" y1="440.6" x2="1464" y2="440.6" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1400" y="431.5" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">6.0</text>
+<text x="1400" y="456.6" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Manage Work</text>
+<text x="1400" y="471.1" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Orders, Rates,</text>
+<text x="1400" y="485.6" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Catalogue</text>
+<circle cx="1400" cy="860" r="68" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1338" y1="831.44" x2="1462" y2="831.44" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1400" y="822.6" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">7.0</text>
+<text x="1400" y="847.44" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Log &amp; Broadcast</text>
+<text x="1400" y="861.94" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Events</text>
+<path d="M1050,135 H800 V195 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="135" x2="846" y2="195" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="170" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D2</text>
+<text x="854" y="161" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Catalogue</text>
+<text x="854" y="176" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">machines, services, materials</text>
+<path d="M1050,270 H800 V330 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="270" x2="846" y2="330" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="305" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D3</text>
+<text x="854" y="296" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Rate card</text>
+<text x="854" y="311" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">rates, settings</text>
+<path d="M1050,395 H800 V455 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="395" x2="846" y2="455" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="430" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D5</text>
+<text x="854" y="421" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Quotes</text>
+<text x="854" y="436" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">quotes</text>
+<path d="M1050,520 H800 V580 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="520" x2="846" y2="580" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="555" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D4</text>
+<text x="854" y="546" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Enquiries</text>
+<text x="854" y="561" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">enquiries, uploads</text>
+<path d="M1050,630 H800 V690 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="630" x2="846" y2="690" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="665" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D7</text>
+<text x="854" y="656" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Drawing files</text>
+<text x="854" y="671" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">private disk storage</text>
+<path d="M1050,770 H800 V830 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="770" x2="846" y2="830" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="805" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D6</text>
+<text x="854" y="796" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Work orders</text>
+<text x="854" y="811" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">work_orders, work_order_events</text>
+<path d="M1050,1040 H800 V1100 H1050" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="846" y1="1040" x2="846" y2="1100" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="823" y="1075" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D1</text>
+<text x="854" y="1066" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Users</text>
+<text x="854" y="1081" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">users (bcrypt hashes)</text>
+<path d="M1300,832 H1110 V888 H1300" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1156" y1="832" x2="1156" y2="888" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="1133" y="865" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D8</text>
+<text x="1164" y="856" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Activity log</text>
+<text x="1164" y="871" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">MongoDB</text>
+<polyline points="190,115 384,115" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="246.5" y="95.5" width="77" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="107" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">page request</text>
+<polyline points="384,145 190,145" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="240.75" y="148.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="160" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">HTML (SSG/ISR)</text>
+<polyline points="190,325 384,325" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="235" y="305.5" width="100" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="317" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">estimate request</text>
+<polyline points="384,355 190,355" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="240.75" y="358.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="370" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">cost breakdown</text>
+<polyline points="190,535 384,535" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="240.75" y="515.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="527" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">enquiry + file</text>
+<polyline points="384,565 190,565" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="240.75" y="568.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="580" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">id + wa.me URL</text>
+<polyline points="190,745 384,745" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="237.875" y="725.5" width="94.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="737" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">orderNo + phone</text>
+<polyline points="384,775 190,775" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="237.875" y="778.5" width="94.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="790" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">status timeline</text>
+<polyline points="190,950 386,950" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="249.375" y="930.5" width="71.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="942" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">credentials</text>
+<polyline points="386,982 190,982" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="252.25" y="986.5" width="65.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="285" y="998" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">JWT cookie</text>
+<polyline points="512,108 1150,102" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="831.125" y="82.5" width="197.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="930" y="94" font-size="11.5" font-weight="600" fill="#1d6b42" text-anchor="middle">wa.me URL (pre-filled quote text)</text>
+<polyline points="800,160 516,138" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="595.75" y="156.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="640" y="168" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">read catalogue</text>
+<polyline points="800,175 494,312" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="610.125" y="230.5" width="59.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="640" y="242" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">materials</text>
+<polyline points="800,300 512,336" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="620.875" y="306.5" width="94.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="668" y="318" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">rates, settings</text>
+<polyline points="500,368 800,415" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="607.25" y="393.5" width="65.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="640" y="405" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">save quote</text>
+<polyline points="518,548 800,548" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="615.75" y="528.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="660" y="540" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">enquiry record</text>
+<polyline points="500,585 800,655" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="601.5" y="616.5" width="77" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="640" y="628" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">drawing file</text>
+<polyline points="800,800 510,780" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="609.75" y="794.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="654" y="806" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">order + events</text>
+<polyline points="500,1000 800,1065" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="594.25" y="1040.5" width="111.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="650" y="1052" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">user record / hash</text>
+<polyline points="1050,165 1345,410" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)" marker-start="url(#ab)"/>
+<rect x="1085.75" y="193.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1130" y="205" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="middle">catalogue CRUD</text>
+<polyline points="1050,300 1332,440" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)" marker-start="url(#ab)"/>
+<rect x="1105.625" y="333.5" width="128.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1170" y="345" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="middle">rates / settings CRUD</text>
+<polyline points="1050,425 1331,462" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="1149.375" y="428.5" width="71.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1185" y="440" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="middle">read quotes</text>
+<polyline points="1050,550 1331,490" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)" marker-start="url(#ab)"/>
+<rect x="1145.75" y="536.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1190" y="548" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="middle">enquiry status</text>
+<polyline points="1050,795 1345,528" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)" marker-start="url(#ab)"/>
+<rect x="1109.875" y="688.5" width="140.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1180" y="700" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="middle">work order + event rows</text>
+<polyline points="1760,450 1471,450" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1626.625" y="430.5" width="82.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1668" y="442" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">updates (JWT)</text>
+<polyline points="1469,495 1760,495" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1618" y="500.5" width="100" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1668" y="512" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">lists, enquiries</text>
+<polyline points="1760,950 520,950" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1607.125" y="930.5" width="105.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1660" y="942" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">staff credentials</text>
+<polyline points="447,985 1760,985" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1627.25" y="990.5" width="65.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1660" y="1002" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">JWT + role</text>
+<polyline points="1468,840 1760,840" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1615.125" y="820.5" width="105.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1668" y="832" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">live push (STOMP)</text>
+<polyline points="1400,541 1400,792" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="1399" y="628.5" width="134.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1402" y="640" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="start">WorkOrderStatusChanged</text>
+<polyline points="430,1013 1400,1013 1400,929" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="812.625" y="995.5" width="174.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="900" y="1007" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="middle">UserLoggedIn / UserRegistered</text>
+<polyline points="450,272 450,235 700,235 700,58 1580,58 1580,885 1462,885" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="1036.875" y="40.5" width="186.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1130" y="52" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="middle">EstimateCalculated / QuoteSaved</text>
+<polyline points="1332,860 1300,860" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="1298.875" y="894.5" width="34.25" height="15.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1316" y="905" font-size="10.5" font-weight="600" fill="#0b5285" text-anchor="middle">write</text>
+<rect x="1080" y="1060" width="640" height="70" rx="6" fill="#fffbe6" stroke="#c9b458"/>
+<text x="1090" y="1080" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Black = data flow · Blue = read/write to data store · Red dashed = in-process domain event · Green = external link.</text>
+<text x="1090" y="1097" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Domain events are published by Spring services and consumed asynchronously by 7.0 (logging) and /topic/work-orders (push).</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="Segoe UI, Arial, Helvetica, sans-serif"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d1d1b"/></marker></defs><rect width="1500" height="900" fill="#fff"/>
+<text x="750" y="36" font-size="24" font-weight="700" fill="#1d1d1b" text-anchor="middle">Front-End Layered Architecture — Next.js Web Application (Unit V mapping)</text>
+<rect x="30" y="70" width="1000" height="170" rx="10" fill="#fff" stroke="#EF7D00" stroke-width="3"/>
+<path d="M30,110 V80 a10,10 0 0 1 10,-10 H1020 a10,10 0 0 1 10,10 V110 Z" transform="translate(0,70)" fill="none"/>
+<rect x="30" y="70" width="1000" height="40" rx="10" fill="#EF7D00"/><rect x="30" y="90" width="1000" height="20" fill="#EF7D00"/>
+<text x="46" y="97" font-size="18" font-weight="700" fill="#fff" text-anchor="start">L1  Presentation Layer</text>
+<text x="1014" y="97" font-size="13" font-weight="400" fill="#fff" text-anchor="end">pages + components</text>
+<text x="50" y="136" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">app/(classic)/quote/page.tsx (SSG + ISR shell), track/page.tsx (SSR + Suspense), dashboard/page.tsx (SSR, HOC)</text>
+<text x="50" y="157" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">features/quote/*  ·  features/track/*  ·  features/dashboard/*  (feature folders, barrel index.ts)</text>
+<text x="50" y="178" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">components/advanced/*: ErrorBoundary (class), PortalModal, VirtualList&lt;T>, AsyncView (render props), Panel (polymorphic)</text>
+<text x="50" y="199" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">Patterns: compound components (Estimator.Number), container/presenter, controlled/uncontrolled inputs</text>
+<rect x="30" y="270" width="1000" height="170" rx="10" fill="#fff" stroke="#0b5285" stroke-width="3"/>
+<path d="M30,310 V280 a10,10 0 0 1 10,-10 H1020 a10,10 0 0 1 10,10 V310 Z" transform="translate(0,270)" fill="none"/>
+<rect x="30" y="270" width="1000" height="40" rx="10" fill="#0b5285"/><rect x="30" y="290" width="1000" height="20" fill="#0b5285"/>
+<text x="46" y="297" font-size="18" font-weight="700" fill="#fff" text-anchor="start">L2  Logic Layer</text>
+<text x="1014" y="297" font-size="13" font-weight="400" fill="#fff" text-anchor="end">custom hooks + client state</text>
+<text x="50" y="336" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">hooks/use-estimate.ts (AbortController, race guard)  ·  use-debounced-value.ts (350 ms)  ·  use-query.ts (cache hook)</text>
+<text x="50" y="357" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">hooks/use-live-work-orders.ts (STOMP + 15 s polling)  ·  use-local-storage.ts  ·  use-media-query.ts</text>
+<text x="50" y="378" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">features/quote/quote-reducer.ts (useReducer state machine)  ·  store/quote-store.ts (Zustand + persist)</text>
+<text x="50" y="399" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">Performance: React.memo, useMemo, useCallback, useTransition, useDeferredValue, lazy + Suspense, next/dynamic</text>
+<rect x="30" y="470" width="1000" height="170" rx="10" fill="#fff" stroke="#4f7f3a" stroke-width="3"/>
+<path d="M30,510 V480 a10,10 0 0 1 10,-10 H1020 a10,10 0 0 1 10,10 V510 Z" transform="translate(0,470)" fill="none"/>
+<rect x="30" y="470" width="1000" height="40" rx="10" fill="#4f7f3a"/><rect x="30" y="490" width="1000" height="20" fill="#4f7f3a"/>
+<text x="46" y="497" font-size="18" font-weight="700" fill="#fff" text-anchor="start">L3  Service Layer</text>
+<text x="1014" y="497" font-size="13" font-weight="400" fill="#fff" text-anchor="end">lib/api (isomorphic + server-only)</text>
+<text x="50" y="536" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">lib/api/client.ts: apiFetch&lt;T>(url, schema), withFallback&lt;T>   ·   lib/api/validate.ts + schemas.ts (runtime validation)</text>
+<text x="50" y="557" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">lib/api/query-cache.ts (stale-while-revalidate, retry 500 ms → 1 s → 2 s)   ·   lib/api/stomp.ts (STOMP 1.2 client)</text>
+<text x="50" y="578" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">lib/api/estimate.ts (TypeScript copy of the formula = offline fallback)</text>
+<text x="50" y="599" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">server-only: lib/api/spring.ts (Bearer JWT, no-store / revalidate tags), lib/api/session.ts (verifyJwt HS256)</text>
+<rect x="30" y="670" width="1000" height="190" rx="10" fill="#fff" stroke="#6b7480" stroke-width="3"/>
+<path d="M30,710 V680 a10,10 0 0 1 10,-10 H1020 a10,10 0 0 1 10,10 V710 Z" transform="translate(0,670)" fill="none"/>
+<rect x="30" y="670" width="1000" height="40" rx="10" fill="#6b7480"/><rect x="30" y="690" width="1000" height="20" fill="#6b7480"/>
+<text x="46" y="697" font-size="18" font-weight="700" fill="#fff" text-anchor="start">L4  Backend-for-Frontend + Backends</text>
+<text x="1014" y="697" font-size="13" font-weight="400" fill="#fff" text-anchor="end">server side</text>
+<text x="50" y="736" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">BFF route handlers: app/api/estimate, app/api/auth/login|logout, app/api/work-orders  (validate, proxy, httpOnly cookie)</text>
+<text x="50" y="757" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">Server Action: features/quote/actions.ts "use server" → Node.js Enquiry API  (URL never reaches the browser bundle)</text>
+<text x="50" y="778" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">Spring Boot Core API :8081 (JWT, JPA, STOMP)  ·  Node.js Enquiry API :4000 (zod, multer)  ·  MySQL pslaser  ·  MongoDB</text>
+<text x="50" y="799" font-size="14" font-weight="400" fill="#1d1d1b" text-anchor="start">Rule: the browser never talks to MySQL; the Web Application talks to APIs through L3 only</text>
+<line x1="530" y1="240" x2="530" y2="270" stroke="#1d1d1b" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="530" y1="440" x2="530" y2="470" stroke="#1d1d1b" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="530" y1="640" x2="530" y2="670" stroke="#1d1d1b" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="1070" y="70" width="400" height="790" rx="10" fill="#fffbe6" stroke="#c9b458"/>
+<text x="1090" y="102" font-size="17" font-weight="700" fill="#1d1d1b" text-anchor="start">Feature-based folder layout (src/)</text>
+<text x="1090" y="136" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">app/                 routes (App Router), route handlers</text>
+<text x="1090" y="158" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">  (classic)/          main site: quote, track, dashboard</text>
+<text x="1090" y="180" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">  api/                BFF handlers</text>
+<text x="1090" y="202" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">features/             one folder per business feature</text>
+<text x="1090" y="224" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">  quote/ track/ dashboard/</text>
+<text x="1090" y="246" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">components/advanced/  shared reusable components</text>
+<text x="1090" y="268" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">hooks/                shared custom hooks</text>
+<text x="1090" y="290" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">store/                Zustand store</text>
+<text x="1090" y="312" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">lib/api/              service layer + types</text>
+<text x="1090" y="334" font-size="13.5" font-family="Consolas, Courier New, monospace" fill="#1d1d1b">lib/pslaser/data.ts   content constants</text>
+<text x="1090" y="390" font-size="17" font-weight="700" fill="#1d1d1b" text-anchor="start">Rendering strategy per route</text>
+<text x="1090" y="424" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="start">/quote</text>
+<text x="1090" y="442" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">SSG + ISR (revalidate 3600 s) + CSR islands</text>
+<text x="1090" y="468" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="start">/track</text>
+<text x="1090" y="486" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">SSR per request, streamed (Suspense)</text>
+<text x="1090" y="512" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="start">/dashboard</text>
+<text x="1090" y="530" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">SSR (cookie) + CSR live board</text>
+<text x="1090" y="556" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="start">/api/*</text>
+<text x="1090" y="574" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">dynamic route handlers (BFF)</text>
+<text x="1090" y="600" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="start">other pages</text>
+<text x="1090" y="618" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">static (prerendered at build)</text>
+<text x="1090" y="670" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="start">Verified by production build (21 Oct 2026):</text>
+<text x="1090" y="694" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">Next.js 16.3.5 (Turbopack): compiled in 12.3 s,</text>
+<text x="1090" y="714" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">TypeScript check 10.2 s, 22 static pages in 1.5 s;</text>
+<text x="1090" y="734" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">/quote marked Revalidate 1h; /track, /dashboard,</text>
+<text x="1090" y="754" font-size="13.5" font-weight="400" fill="#1d1d1b" text-anchor="start">and /api/* marked ƒ (dynamic).</text>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1000" viewBox="0 0 1900 1000" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d1d1b"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b5285"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker>
+</defs><rect width="1900" height="1000" fill="#fff"/>
+<text x="950" y="34" font-size="24" font-weight="700" fill="#1d1d1b" text-anchor="middle">DFD Level 2 — Work-Order Lifecycle (Processes 6.0, 7.0 and 5.0)</text>
+<rect x="24" y="124" width="170" height="140" fill="#d9dcdf"/><rect x="20" y="120" width="170" height="140" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="105" y="160" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">E2</text>
+<text x="105" y="178" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">Staff user</text>
+<text x="105" y="194" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">(admin / staff)</text>
+<rect x="24" y="704" width="170" height="140" fill="#d9dcdf"/><rect x="20" y="700" width="170" height="140" fill="#fff" stroke="#1d1d1b" stroke-width="2"/>
+<text x="105" y="740" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">E1</text>
+<text x="105" y="758" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">Client</text>
+<text x="105" y="774" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="middle">(browser)</text>
+<circle cx="330" cy="190" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="274" y1="163.96" x2="386" y2="163.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="330" y="155.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">6.1</text>
+<text x="330" y="179.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Verify JWT</text>
+<text x="330" y="194.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">&amp; Role</text>
+<circle cx="580" cy="190" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="524" y1="163.96" x2="636" y2="163.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="580" y="155.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">6.2</text>
+<text x="580" y="179.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Create / Update</text>
+<text x="580" y="194.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Work Order</text>
+<circle cx="830" cy="190" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="774" y1="163.96" x2="886" y2="163.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="830" y="155.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">6.3</text>
+<text x="830" y="179.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Append Status</text>
+<text x="830" y="194.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Event (tx)</text>
+<circle cx="1080" cy="190" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1024" y1="163.96" x2="1136" y2="163.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1080" y="155.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">6.4</text>
+<text x="1080" y="179.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Publish Status</text>
+<text x="1080" y="194.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Changed Event</text>
+<circle cx="1380" cy="120" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1324" y1="93.96000000000001" x2="1436" y2="93.96000000000001" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1380" y="85.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">7.1</text>
+<text x="1380" y="109.96000000000001" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Persist</text>
+<text x="1380" y="124.46000000000001" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Activity Record</text>
+<circle cx="1380" cy="300" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1324" y1="273.96" x2="1436" y2="273.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="1380" y="265.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">7.2</text>
+<text x="1380" y="289.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Broadcast</text>
+<text x="1380" y="304.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">STOMP Message</text>
+<path d="M1820,92 H1560 V148 H1820" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="1606" y1="92" x2="1606" y2="148" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="1583" y="125" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D8</text>
+<text x="1614" y="116" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Activity log</text>
+<text x="1614" y="131" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">MongoDB activity_log</text>
+<polyline points="190,190 267,190" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="197.75" y="171.5" width="60.5" height="15.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="228" y="182" font-size="10.5" font-weight="600" fill="#222" text-anchor="middle">Bearer JWT</text>
+<polyline points="393,190 517,190" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="399.25" y="170.5" width="111.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="455" y="182" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">authorised request</text>
+<polyline points="643,190 767,190" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="657.875" y="170.5" width="94.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="705" y="182" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">order row saved</text>
+<polyline points="893,190 1017,190" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="910.75" y="170.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="955" y="182" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">status changed</text>
+<polyline points="1141,165 1322,130" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="1174.5" y="123.5" width="123" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1236" y="135" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="middle">event (after commit)</text>
+<polyline points="1141,215 1322,290" fill="none" stroke="#b3261e" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#ar)"/>
+<rect x="1174.5" y="256.5" width="123" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1236" y="268" font-size="11.5" font-weight="600" fill="#b3261e" text-anchor="middle">event (after commit)</text>
+<polyline points="1442,120 1560,120" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="1480.25" y="101.5" width="39.5" height="15.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1500" y="112" font-size="10.5" font-weight="600" fill="#0b5285" text-anchor="middle">insert</text>
+<polyline points="1380,362 1380,410 105,410 105,260" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="893.125" y="392.5" width="473.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="1130" y="404" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">live push on /topic/work-orders (JSON payload: orderNo, fromStatus, toStatus, at)</text>
+<path d="M760,470 H430 V530 H760" fill="#eaf2f9" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="476" y1="470" x2="476" y2="530" stroke="#1d1d1b" stroke-width="1.5"/>
+<text x="453" y="505" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">D6</text>
+<text x="484" y="496" font-size="12" font-weight="600" fill="#1d1d1b" text-anchor="start">Work orders &amp; events</text>
+<text x="484" y="511" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="start">work_orders, work_order_events</text>
+<polyline points="580,252 580,470" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)" marker-start="url(#ab)"/>
+<rect x="583" y="368.5" width="71.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="586" y="380" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="start">write order</text>
+<polyline points="830,252 760,482" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="827" y="368.5" width="100" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="830" y="380" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="start">insert event row</text>
+<circle cx="330" cy="770" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="274" y1="743.96" x2="386" y2="743.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="330" y="735.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">5.1</text>
+<text x="330" y="759.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Validate</text>
+<text x="330" y="774.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">orderNo + phone</text>
+<circle cx="630" cy="770" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="574" y1="743.96" x2="686" y2="743.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="630" y="735.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">5.2</text>
+<text x="630" y="759.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Fetch Order</text>
+<text x="630" y="774.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">+ Events</text>
+<circle cx="930" cy="770" r="62" fill="#fff4e0" stroke="#1d1d1b" stroke-width="2"/>
+<line x1="874" y1="743.96" x2="986" y2="743.96" stroke="#1d1d1b" stroke-width="1.2"/>
+<text x="930" y="735.9" font-size="14" font-weight="700" fill="#1d1d1b" text-anchor="middle">5.3</text>
+<text x="930" y="759.96" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Mask Phone,</text>
+<text x="930" y="774.46" font-size="12" font-weight="400" fill="#1d1d1b" text-anchor="middle">Build Timeline</text>
+<polyline points="190,770 267,770" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="187.25" y="751.5" width="81.5" height="15.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="228" y="762" font-size="10.5" font-weight="600" fill="#222" text-anchor="middle">orderNo, phone</text>
+<polyline points="393,770 567,770" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="447.25" y="750.5" width="65.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="480" y="762" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">lookup key</text>
+<polyline points="693,770 867,770" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="735.75" y="750.5" width="88.5" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="780" y="762" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">order + events</text>
+<polyline points="930,833 930,900 105,900 105,840" fill="none" stroke="#1d1d1b" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="311.875" y="882.5" width="416.25" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="520" y="894" font-size="11.5" font-weight="600" fill="#222" text-anchor="middle">timeline JSON (phone masked) or 404 not found (never reveals existence)</text>
+<polyline points="595,530 610,708" fill="none" stroke="#0b5285" stroke-width="1.8" marker-end="url(#ab)"/>
+<rect x="609" y="608.5" width="151.75" height="16.5" rx="3" fill="#fff" fill-opacity="0.95"/>
+<text x="612" y="620" font-size="11.5" font-weight="600" fill="#0b5285" text-anchor="start">SELECT by orderNo + phone</text>
+<rect x="1180" y="520" width="680" height="330" rx="6" fill="#fffbe6" stroke="#c9b458"/>
+<text x="1190" y="540" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">6.1 Spring Security filter verifies the HS256 JWT and the role (admin / staff).</text>
+<text x="1190" y="557" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">6.2 JPA writes work_orders; 6.3 inserts a work_order_events row in the SAME</text>
+<text x="1190" y="574" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">    @Transactional method as the status change.</text>
+<text x="1190" y="591" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">6.4 WorkOrderStatusChanged is published with ApplicationEventPublisher and</text>
+<text x="1190" y="608" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">    delivered only AFTER the transaction commits (no event for rolled-back data).</text>
+<text x="1190" y="625" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">7.1 ActivityEventListener (async) stores the event in MongoDB.</text>
+<text x="1190" y="642" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">7.2 The same listener sends the message to the STOMP simple broker; the Next.js</text>
+<text x="1190" y="659" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">    dashboard subscribes (fallback: 15 s polling).</text>
+<text x="1190" y="676" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">5.1-5.3 Customer tracking is a read-only path: both orderNo and phone must</text>
+<text x="1190" y="693" font-size="12.5" font-weight="400" fill="#1d1d1b" text-anchor="start">    match, otherwise the response is 404 with no hint whether the order exists.</text>
+</svg>
