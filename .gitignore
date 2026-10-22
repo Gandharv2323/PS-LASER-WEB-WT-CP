@@ -47,3 +47,7 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Local-only files
+services/db/SEED_CREDENTIALS.md
+~$*
